@@ -9,11 +9,14 @@ define(
     'lodash',
     'config',
 
+    './I18nFilter',
   ],
-  function (angular, _, config) {
+  function (angular, _, config
+    , i18nFilter) {
     'use strict';
 
     var module = angular.module(config.name + '.filters', []);
 
+    module.filter('i18n', i18nFilter);
   }
 );

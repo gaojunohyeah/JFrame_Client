@@ -5,6 +5,7 @@ define(
     'angular',
 
     'config',
+    'lang',
 
     // Other Standard Libes
     'ionic',

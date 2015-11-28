@@ -20,6 +20,10 @@ define(
         logout: function (username, accesstoken) {
           return $http.post(host + 'logout', {username: username, accesstoken: accesstoken});
         },
+        // get i18n lang file
+        getLang: function (lang){
+          return $http.post('/js/cfg/i18n/' + lang + '.json');
+        }
       }
     }];
   });

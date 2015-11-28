@@ -13,6 +13,8 @@ requirejs.config({
 
   paths: {
     config:           './cfg/config',
+    lang:             './cfg/lang',
+    sprintf:           './util/sprintf',
 
     lodash:           '../lib/lodash/lodash',//.min',
     angular:          '../lib/ionic/js/angular/angular',//.min',
