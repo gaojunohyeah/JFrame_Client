@@ -1,0 +1,22 @@
+<div style="width: 100%;" ng-class="{'animated slideInDown':page.s1}">
+  <ion-scroll zooming="true" direction="y" style="width: 100%;" ng-style="spageHeight">
+    <ul ng-repeat="area in areas">
+      <li>{{area.name}}</li>
+      <li ng-repeat="citys in area.citys | li4" class="row">
+        <button ng-repeat="city in citys" class="button button-outline button-positive">
+          {{city}}
+        </button>
+      </li>
+    </ul>
+  </ion-scroll>
+  <div class="jf-tabs-bottom jf-tabs-bottom-search">
+    <div style="width: 70%;float: left;text-align: center;font-size: 20px;line-height:49px;">
+      {{"BASE.SEARCH.CARNUM"|i18n:100000}}
+    </div>
+    <div style="width: 30%;float: right;">
+      <button class="button button-outline button-positive" style="width: 100%;">
+        {{"BASE.SEARCH.WATCH"|i18n}}
+      </button>
+    </div>
+  </div>
+</div>

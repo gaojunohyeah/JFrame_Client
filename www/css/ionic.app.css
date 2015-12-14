@@ -9088,3 +9088,154 @@ a.button {
   opacity: 0;
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
+
+/**
+ * {varriables} Sheets
+ * Created by gaojun on 15/12/2.
+ * --------------------------------------------------
+ */
+/**
+ * {base} Sheets
+ * Created by gaojun on 15/12/2.
+ * --------------------------------------------------
+ */
+.jf-text-center {
+  text-align: center; }
+
+/**
+ * {grid} Sheets
+ * Created by gaojun on 15/12/8.
+ * --------------------------------------------------
+ */
+.jf-row-search {
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 0; }
+
+.jf-row-search-height, .jf-row-search {
+  height: 30px; }
+
+.jf-row-search-top {
+  top: 30px; }
+
+.jf-col-bottom-red {
+  border-bottom: 2px solid red; }
+
+/**
+ * {animation} Sheets
+ * Created by gaojun on 15/12/4.
+ * --------------------------------------------------
+ */
+@-webkit-keyframes jf-animateInPrimary {
+  0% {
+    -webkit-transform: translate3d(-100%, 0, 0); }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0); } }
+
+.jf-animate-in-primary {
+  -webkit-animation: jf-animateInPrimary;
+  animation: jf-animateInPrimary;
+  -webkit-animation-duration: 750ms;
+  animation-duraton: 750ms; }
+
+@-webkit-keyframes jf-animateInSecondary {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.jf-animate-in-secondary {
+  -webkit-animation: jf-animateInSecondary ease-in 1;
+  animation: jf-animateInSecondary ease-in 1;
+  -webkit-animation-duration: 500ms;
+  animation-duraton: 500ms; }
+
+/**
+ * {list} Sheets
+ * Created by gaojun on 15/12/4.
+ * --------------------------------------------------
+ */
+.jf-item-small {
+  height: 90px; }
+  .jf-item-small .jf-item-small-content {
+    width: 70%;
+    height: 100%;
+    float: right; }
+  .jf-item-small .jf-item-left, .jf-item-small .jf-item-subdiv {
+    float: left; }
+  .jf-item-small .jf-item-subdiv {
+    width: 100%; }
+
+/**
+ * {button} Sheets
+ * Created by gaojun on 15/12/4.
+ * --------------------------------------------------
+ */
+.jf-img-small {
+  padding: 2px 3px 1px;
+  min-width: 20px;
+  min-height: 22px;
+  font-size: 12px;
+  line-height: 18px; }
+
+/**
+ * {banner} Sheets
+ * Created by gaojun on 15/12/2.
+ * --------------------------------------------------
+ */
+.jf-banner {
+  width: 100%;
+  height: 200px;
+  z-index: 0; }
+  .jf-banner .jf-banner-bg {
+    position: absolute;
+    z-index: -1; }
+  .jf-banner .jf-banner-title {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center; }
+  .jf-banner .jf-banner-subtitle {
+    width: 100%;
+    text-align: center; }
+  .jf-banner .jf-banner-search {
+    width: 100%;
+    text-align: center; }
+
+.jf-bar-height, .jf-search-banner {
+  padding-top: 44px; }
+
+.jf-search-banner {
+  width: 100%;
+  height: 44px;
+  z-index: 8;
+  position: absolute; }
+
+/**
+ * {slide} Sheets
+ * Created by gaojun on 15/12/2.
+ * --------------------------------------------------
+ */
+.jf-home-slide-div {
+  width: 100%;
+  height: 220px;
+  background: #777777; }
+
+.jf-home-slide {
+  width: 100%;
+  height: 200px; }
+
+/**
+ * {tabs} Sheets
+ * Created by gaojun on 15/12/8.
+ * --------------------------------------------------
+ */
+.jf-tabs-bottom {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  height: 49px; }
+
+.jf-tabs-bottom-search {
+  bottom: 49px;
+  border: 1px solid #ddd;
+  background: #fff; }

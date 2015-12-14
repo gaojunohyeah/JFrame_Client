@@ -1,0 +1,18 @@
+/**
+ * {tabs} Sheets
+ * Created by gaojun on 15/12/8.
+ * --------------------------------------------------
+ */
+
+.jf-tabs-bottom {
+  position: fixed;
+  z-index: $z-index-tabs;
+  width: 100%;
+  height: $tabs-height;
+}
+
+.jf-tabs-bottom-search {
+  bottom: $tabs-height;
+  border: 1px solid $bar-light-border;
+  background: $light;
+}

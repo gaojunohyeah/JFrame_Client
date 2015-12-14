@@ -10,13 +10,15 @@ define(
     'config',
 
     './I18nFilter',
+    './Li4Filter',
   ],
   function (angular, _, config
-    , i18nFilter) {
+    , i18nFilter, li4Filter) {
     'use strict';
 
     var module = angular.module(config.name + '.filters', []);
 
     module.filter('i18n', i18nFilter);
+    module.filter('li4', li4Filter);
   }
 );

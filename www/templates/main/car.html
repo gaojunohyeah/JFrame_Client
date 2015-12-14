@@ -1,0 +1,51 @@
+<ion-view class="jf-animate-in-secondary">
+  <div class="bar bar-header bar-stable">
+    <label class="item item-input" style="width: 80%">
+      <i class="icon ion-search placeholder-icon"></i>
+      <input type="text" ng-model="home.stext" placeholder="{{'BASE.CAR.SEARCH'|i18n}}" ng-blur="homeSearch();">
+    </label>
+
+    <div style="width:20%;padding-left: 30px">
+      <img src="img/yiliya.png" width="75%" height="auto">
+    </div>
+  </div>
+
+  <div class="jf-search-banner">
+    <ul ng-include="'templates/base/search/basePage.html'">
+    </ul>
+  </div>
+
+  <ion-content has-bouncing="false" style="top:73px;">
+    <ul class="list">
+      <li class="item jf-item-small" ng-repeat="carItem in carItems" ng-click="showCarDetail(item);">
+        <img src="img/yiliya.png" width="20%" height="auto">
+
+        <div class="jf-item-small-content">
+          <div  class="jf-item-subdiv">
+            <h3>carItem.modelName</h3>
+          </div>
+
+          <div class="jf-item-subdiv">
+            <h2 class="jf-item-left" style="color: red;">
+              carItem.price{{"CAR.PRICE.UNIT"|i18n}}&nbsp;&nbsp;&nbsp;&nbsp;
+            </h2>
+
+            <div style="padding-top: 5px;">
+              <h4 style="color: grey;">carItem.startTime 1.21{{"CAR.PRICE.DISTANCE"|i18n}}</h4>
+            </div>
+          </div>
+
+          <div class="jf-item-subdiv">
+            <div class="jf-item-left" ng-repeat="tag in carItem.tags">
+              <button class="button jf-img-small button-outline"
+                      ng-class="{'button-positive':tag==1,'button-energized':tag==2,'button-balanced':tag==3,}">
+                {{"CAR.TAG.TAG"+tag|i18n}}
+              </button>
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ion-content>
+</ion-view>

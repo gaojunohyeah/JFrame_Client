@@ -13,15 +13,20 @@ define(
       var host = config.local_url;
       return {
         // login request
-        login: function (username, password) {
-          return $http.post(host + 'login', {username: username, password: password});
+        login: function (user) {
+          return $http.post(host + 'login', {user: user}
+            , {ignoreAuthModule: true});
         },
         // logout request
-        logout: function (username, accesstoken) {
-          return $http.post(host + 'logout', {username: username, accesstoken: accesstoken});
+        logout: function () {
+          return $http.post(host + 'logout', {}, {ignoreAuthModule: true});
+        },
+        // game request
+        game: function () {
+          return $http.post(host + 'game', {});
         },
         // get i18n lang file
-        getLang: function (lang){
+        getLang: function (lang) {
           return $http.post('/js/cfg/i18n/' + lang + '.json');
         }
       }

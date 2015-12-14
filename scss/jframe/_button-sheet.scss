@@ -1,0 +1,13 @@
+/**
+ * {button} Sheets
+ * Created by gaojun on 15/12/4.
+ * --------------------------------------------------
+ */
+
+.jf-img-small {
+  padding: 2px $jf-img-small-padding 1px;
+  min-width: $jf-img-small-height;
+  min-height: $jf-img-small-height + 2;
+  font-size: $jf-img-small-font-size;
+  line-height: $jf-img-small-height - $button-border-width - 1;
+}

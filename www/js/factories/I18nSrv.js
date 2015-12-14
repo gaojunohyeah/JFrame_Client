@@ -69,7 +69,7 @@ define(
 
           getLocalizedString: function (value) {
             //  Contextualize missing translation
-            var translated = '!' + value + '!';
+            var translated = '!' + value[0] + '!';
 
             var transFuc = function () {
               //  make sure the dictionary has valid data
@@ -77,8 +77,8 @@ define(
                 var placeholders = [];
 
                 // 特殊参数
-                for (var i = 1; i < arguments.length; i++) {
-                  placeholders.push(arguments[i]);
+                for (var i = 1; i < value.length; i++) {
+                  placeholders.push(value[i]);
                 }
 
                 var translate = function (value, placeholders) {
@@ -92,7 +92,7 @@ define(
                   return sprintf.sprintf(translated, placeholders);
                 };
 
-                var result = translate(value, placeholders);
+                var result = translate(value[0], placeholders);
                 if ((translated !== null) && (translated != undefined)) {
                   //  set the translated
                   translated = result;

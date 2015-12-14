@@ -1,0 +1,29 @@
+/**
+ * {grid} Sheets
+ * Created by gaojun on 15/12/8.
+ * --------------------------------------------------
+ */
+
+.jf-row-search {
+  //position: fixed;
+  background: $light;
+  border-bottom: 1px solid $bar-light-border;
+  padding: 0;
+  @extend .jf-row-search-height;
+}
+
+.jf-row-search-height {
+  height: $jf-row-search-height;
+}
+
+.jf-row-search-top {
+  top: $jf-row-search-height;
+}
+
+.jf-col {
+
+}
+
+.jf-col-bottom-red {
+  border-bottom: 2px solid red;
+}

@@ -1,0 +1,24 @@
+/**
+ * {list} Sheets
+ * Created by gaojun on 15/12/4.
+ * --------------------------------------------------
+ */
+
+.jf-item-small {
+  height: 90px;
+
+  .jf-item-small-content {
+    width: 70%;
+    height: 100%;
+    float: right;
+  }
+
+  .jf-item-left {
+    float:left;
+  }
+
+  .jf-item-subdiv {
+    @extend .jf-item-left;
+    width:100%;
+  }
+}

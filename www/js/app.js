@@ -9,11 +9,16 @@ define(
 
     // Other Standard Libes
     'ionic',
-    'ionicAngular',
+    //'ionicAngular',
     'angularAnimate',
     'angularResource',
     'angularSanitize',
     'uiRouter',
+    'ngCookies',
+    'ngHttpAuth',
+    'ngLocalStorage',
+    'ngAnimate',
+    'ngFx',
   ],
   function (_, angular, config) {
     var dep_lib = [
@@ -25,6 +30,11 @@ define(
       config.name + '.directives',
       config.name + '.filters',
       'ngResource',
+      'ngCookies',
+      'http-auth-interceptor',
+      'LocalStorageModule',
+      'ngAnimate',
+      'ngFx',
     ];
 
     //Ionic Starter App

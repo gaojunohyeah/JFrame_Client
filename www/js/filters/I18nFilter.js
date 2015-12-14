@@ -9,7 +9,7 @@ define(
 
     return ['i18nSrv', function (i18nSrv) {
       return function () {
-        return i18nSrv.getLocalizedString.apply(null, arguments);
+        return i18nSrv.getLocalizedString(arguments) ;
       }
     }];
   });

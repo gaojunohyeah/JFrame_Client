@@ -1,0 +1,32 @@
+<div ng-controller="searchPageCtrl" style="background: #f8f8f8;">
+  <div class="row jf-row-search" style="position: relative;z-index: 1;">
+    <div class="col col-20 jf-text-center jf-row-search-height" ng-class="{'jf-col-bottom-red': page.s1}"
+         ng-click="showSearchItem(1);">
+      {{'CAR.CITY'|i18n}}
+      <i class="icon" ng-class="{'ion-chevron-down': !page.s1, 'ion-chevron-up': page.s1}"></i>
+    </div>
+    <div class="col"></div>
+    <div class="col col-20 jf-text-center" ng-class="{'jf-col-bottom-red': page.s2}" ng-click="showSearchItem(2);">
+      {{'CAR.BRAND'|i18n}}
+      <i class="icon" ng-class="{'ion-chevron-down': !page.s2, 'ion-chevron-up': page.s2}"></i>
+    </div>
+    <div class="col"></div>
+    <div class="col col-20 jf-text-center" ng-class="{'jf-col-bottom-red': page.s3}" ng-click="showSearchItem(3);">
+      {{'CAR.PRICE'|i18n}}
+      <i class="icon" ng-class="{'ion-chevron-down': !page.s3, 'ion-chevron-up': page.s3}"></i>
+    </div>
+    <div class="col"></div>
+    <div class="col col-20 jf-text-center" ng-class="{'jf-col-bottom-red': page.s4}" ng-click="showSearchItem(4);">
+      {{'CAR.FILTER'|i18n}}
+      <i class="icon" ng-class="{'ion-chevron-down': !page.s4, 'ion-chevron-up': page.s4}"></i>
+    </div>
+  </div>
+  <div ng-show="page.show">
+    <!--<div>-->
+    <div ng-include="page.url"></div>
+    <!--<div ng-show="page.s1" ng-include="page.s1url"></div>-->
+    <!--<div ng-show="page.s2" ng-include="page.s2url"></div>-->
+    <!--<div ng-show="page.s3" ng-include="page.s3url"></div>-->
+    <!--<div ng-show="page.s4" ng-include="page.s4url"></div>-->
+  </div>
+</div>

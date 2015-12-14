@@ -1,0 +1,45 @@
+/**
+ * {banner} Sheets
+ * Created by gaojun on 15/12/2.
+ * --------------------------------------------------
+ */
+
+.jf-banner {
+  width: 100%;
+  height: 200px;
+  z-index: $jf-z-index-banner;
+
+  .jf-banner-bg {
+    position: absolute;
+    z-index: $jf-z-index-banner-bg;
+  }
+
+  .jf-banner-title {
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .jf-banner-subtitle {
+    width: 100%;
+    text-align: center;
+  }
+
+  .jf-banner-search {
+    //padding-top: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.jf-bar-height {
+  padding-top: $bar-height;
+}
+
+.jf-search-banner {
+  @extend .jf-bar-height;
+  width: 100%;
+  height: $bar-height;
+  z-index: $jf-z-index-search-banner;
+  position: absolute;
+}

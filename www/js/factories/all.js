@@ -11,14 +11,20 @@ define(
 
     './ReqSrv',
     './I18nSrv',
+    './AuthSrv',
+    './SearchItemSrv',
+    './EnumSrv',
   ],
   function (angular, _, config
-    , reqSrv, i18nSrv) {
+    , reqSrv, i18nSrv, authSrv, searchItemSrv, enumSrv) {
     'use strict';
 
     var module = angular.module(config.name + '.factories', []);
 
     module.factory('reqSrv', reqSrv);
     module.factory('i18nSrv', i18nSrv);
+    module.factory('authSrv', authSrv);
+    module.factory('searchItemSrv', searchItemSrv);
+    module.factory('enumSrv', enumSrv);
   }
 );

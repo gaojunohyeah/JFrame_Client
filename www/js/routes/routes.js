@@ -5,7 +5,14 @@ define([
   function (angular, config) {
     var module = angular.module(config.name + '.routes', []);
 
-    module.config(function ($stateProvider, $urlRouterProvider) {
+    module.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+      // 切换显示方式为ios
+      $ionicConfigProvider.views.transition('ios');
+      $ionicConfigProvider.backButton.text('Go Back').icon('ion-chevron-left');
+      $ionicConfigProvider.navBar.alignTitle("center");
+      $ionicConfigProvider.tabs.position('bottom');
+      $ionicConfigProvider.tabs.style('standard');
+
       // Ionic uses AngularUI Router which uses the concept of states
       // Learn more here: https://github.com/angular-ui/ui-router
       // Set up the various states which the app can be in.
@@ -21,42 +28,51 @@ define([
           templateUrl: 'templates/signup.html',
           controller: 'signupCtrl'
         })
-        //.state('main.home', {
-        //  url: '/home',
-        //  views: {
-        //    'tab1': {
-        //      templateUrl: 'templates/home.html',
-        //      controller: 'homeCtrl'
-        //    }
-        //  }
-        //})
-        //.state('main.car', {
-        //  url: '/car',
-        //  views: {
-        //    'tab2': {
-        //      templateUrl: 'templates/car.html',
-        //      controller: 'carCtrl'
-        //    }
-        //  }
-        //})
-        //.state('main.setting', {
-        //  url: '/setting',
-        //  views: {
-        //    'tab3': {
-        //      templateUrl: 'templates/setting.html',
-        //      controller: 'siteCtrl'
-        //    }
-        //  }
-        //})
-        //.state('main', {
-        //  url: '/main',
-        //  abstract: true,
-        //  templateUrl: 'templates/main.html'
-        //})
+        .state('main.home', {
+          url: '/home',
+          views: {
+            'tab1': {
+              templateUrl: 'templates/main/home.html',
+              controller: 'homeCtrl'
+            }
+          }
+        })
+        .state('main.car', {
+          url: '/car',
+          views: {
+            'tab2': {
+              templateUrl: 'templates/main/car.html',
+              controller: 'carCtrl'
+            }
+          }
+        })
+        .state('main.sell', {
+          url: '/sell',
+          views: {
+            'tab3': {
+              templateUrl: 'templates/main/sell.html',
+              controller: 'sellCtrl'
+            }
+          }
+        })
+        .state('main.user', {
+          url: '/user',
+          views: {
+            'tab4': {
+              templateUrl: 'templates/main/user.html',
+              controller: 'userCtrl'
+            }
+          }
+        })
+        .state('main', {
+          url: '/main',
+          abstract: true,
+          templateUrl: 'templates/main/main.html'
+        })
       ;
 
       // if none of the above states are matched, use this as the fallback
-      $urlRouterProvider.otherwise('/login');
+      $urlRouterProvider.otherwise('/main/home');
     });
   }
 );

@@ -6,6 +6,12 @@
   },
   "dependencies": {
     "requirejs": "~2.1.22",
-    "lodash": "~3.10.1"
+    "lodash": "~3.10.1",
+    "angular-http-auth": "~1.2.3",
+    "angular-local-storage": "~0.2.3",
+    "angular-cookies": "~1.4.8",
+    "jquery": "~2.0.3",
+    "animate.css": "~3.4.0",
+    "ngFx": "~1.1.0"
   }
 }
