@@ -16,3 +16,11 @@
   border: 1px solid $bar-light-border;
   background: $light;
 }
+
+.jf-tabs-bottom-text {
+  @extend .jf-float-left;
+  @extend .jf-width-70;
+  @extend .jf-text-center;
+  font-size: $jf-text-size-middle;
+  line-height: $tabs-height;
+}

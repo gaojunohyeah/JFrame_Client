@@ -3,12 +3,14 @@
  */
 
 define(
-  [],
-  function () {
+  [
+    'lodash'
+  ],
+  function (_) {
     'use strict';
 
-    return ['$scope', 'reqSrv', '$window',
-      function ($scope, reqSrv, $window) {
+    return ['$scope', 'reqSrv', '$window', '$filter',
+      function ($scope, reqSrv, $window, $filter) {
         $scope.spageHeight = {
           height: ($window.innerHeight - 72) + 'px',
         };
@@ -54,6 +56,10 @@ define(
             ]
           },
         ];
+
+        _.forEach($scope.areas, function (area) {
+          area.citys = $filter('li4')(area.citys)
+        });
 
         /**
          * 显示查询条件

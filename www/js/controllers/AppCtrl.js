@@ -8,9 +8,17 @@ define([
   function (config) {
     'use strict';
 
-    return ['$scope', '$rootScope', '$state',
-      function ($scope, $rootScope, $state) {
+    return ['$scope', '$rootScope', '$state', 'dataSrv',
+      function ($scope, $rootScope, $state, dataSrv) {
         $rootScope.config = config;
+
+        /**
+         * 初始化，获取服务端一些必备数据
+         */
+        $scope.init = function () {
+          // 初始数据获取
+          dataSrv.init();
+        };
 
         $scope.$on('event:auth-loginRequired', function (e, rejection) {
           console.log('handling login required');
@@ -36,6 +44,9 @@ define([
           $state.go('login', {});
           //$state.go('app.home', {}, {reload: true, inherit: false});
         });
+
+        // 初始化
+        $scope.init();
       }
     ];
   });

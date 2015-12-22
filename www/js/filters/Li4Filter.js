@@ -12,10 +12,11 @@ define(
     return [
       function () {
         return function (array) {
+          var oldArray = array.concat([]);
           var newArray = [];
 
           //var totalNum = _.size(array);
-          _.forEach(array, function (data, index) {
+          _.forEach(oldArray, function (data, index) {
             var i = Math.floor(index / 4);
 
             if (_.isUndefined(newArray[i]) || _.isNull(newArray[i]) || "" === newArray[i]) {
