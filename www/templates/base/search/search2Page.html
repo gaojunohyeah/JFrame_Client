@@ -1,3 +1,49 @@
-<div>
-  bbbbbbbbbb
+<div class="jf-width-100" ng-class="{'animated slideInDown':page.s2}">
+  <ion-scroll zooming="true" direction="y" class="jf-width-100" ng-style="spageHeight">
+    <div class="list">
+      <div ng-repeat="brands in brandInfos track by $index">
+        <div ng-show="brands" id="{{'BASE.LETTER'+$index}}" class="item item-divider">
+          {{'BASE.LETTER'+$index|i18n}}
+        </div>
+        <div ng-show="brands" ng-repeat="brand in brands track by $index">
+          <a class="item" ng-click="chooseBrand(brand);" href="javascript:void(0)">
+            {{brand.brandName}}
+          </a>
+
+          <div ng-show="showBrandid == brand.brandId" style="background: #666666;">
+            <div class="row">
+              <div class="col">
+                <button class="button button-small button-light"
+                        style="width: 100%;height: 40px;"
+                        ng-click="chooseSeries(0);">
+                  {{'CAR.SERIES.ALL'|i18n}}
+                </button>
+              </div>
+            </div>
+            <div class="row" ng-repeat="doubleSeries in brand.series track by $index">
+              <div class="col col-50 col-center" ng-repeat="series in doubleSeries track by $index">
+                <button class="button button-small button-light"
+                        style="width: 100%;height: 40px;"
+                        ng-click="chooseSeries(series.id);">
+                  {{series.name}}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-scroll>
+
+  <div class="jf-tabs-bg jf-tabs-price-bottom">
+    <a class="button icon-left ion-chevron-up button-clear button-dark" ng-click="showSearchItem();"></a>
+  </div>
+
+  <!--<div style="position: absolute;top: 50px;right: 10px;">-->
+    <!--<ul>-->
+      <!--<li ng-repeat="brands in brandInfos track by $index" ng-show="brands">-->
+        <!--<a href="javascript:void(0)" ng-click="goto('haha1')"><font color="red">{{'BASE.LETTER'+$index|i18n}}</font></a>-->
+      <!--</li>-->
+    <!--</ul>-->
+  <!--</div>-->
 </div>

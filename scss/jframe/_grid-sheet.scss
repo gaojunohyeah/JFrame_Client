@@ -24,6 +24,22 @@
 
 }
 
+.col-1 {
+  @include flex(0, 0, 1%);
+  max-width: 1%;
+}
+.col-4 {
+  @include flex(0, 0, 4%);
+  max-width: 4%;
+}
+.col-5 {
+  @include flex(0, 0, 5%);
+  max-width: 5%;
+}
+.col-30 {
+  @include flex(0, 0, 30%);
+  max-width: 30%;
+}
 .jf-col-bottom-red {
   border-bottom: 2px solid red;
 }

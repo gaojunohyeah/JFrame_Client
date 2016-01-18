@@ -32,8 +32,10 @@ define(
         all: "*",
         city: 'city',
         ctype: 'carType',
+        color: 'color',
         price: 'price',
-        brand: 'brand',
+        brandId: 'brandId',
+        seriesId: 'seriesId',
         tag: 'tag',
       }
     }

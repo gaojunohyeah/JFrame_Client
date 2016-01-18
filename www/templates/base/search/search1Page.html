@@ -1,11 +1,14 @@
 <div class="jf-width-100" ng-class="{'animated slideInDown':page.s1}">
   <ion-scroll zooming="true" direction="y" class="jf-width-100" ng-style="spageHeight">
-    <ul ng-repeat="area in areas">
-      <li>{{area.name}}</li>
-      <li ng-repeat="citys in area.citys" class="row">
+    <ul ng-repeat="(areaname, citys) in areas">
+      <li>&nbsp;&nbsp;{{areaname|i18n}}</li>
+      <li ng-repeat="citys in citys" class="row">
         <div class="col col-25 col-center" ng-repeat="city in citys track by $index">
-          <button class="button button-small button-outline button-dark">
-            {{city}}
+          <button class="button button-small"
+                  ng-class="{'button-assertive':cityBtns['id'+city.id],'button-light':!cityBtns['id'+city.id]}"
+                  style="width: 100%;height: 40px;"
+                  ng-click="chooseCity(city.id);">
+            {{city.name}}
           </button>
         </div>
       </li>
@@ -13,10 +16,10 @@
   </ion-scroll>
   <div class="jf-tabs-bottom jf-tabs-bottom-search">
     <div class="jf-tabs-bottom-text">
-      {{"BASE.SEARCH.CARNUM"|i18n:100000}}
+      {{"BASE.SEARCH.CARNUM"|i18n:queryNum}}
     </div>
     <div class="jf-width-30 jf-float-right">
-      <button class="button button-outline button-positive jf-width-100">
+      <button class="button button-assertive jf-width-100" ng-click="cityConfirm();">
         {{"BASE.SEARCH.WATCH"|i18n}}
       </button>
     </div>

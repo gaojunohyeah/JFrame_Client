@@ -5,16 +5,20 @@
  */
 
 .jf-tabs-bottom {
-  position: fixed;
+  //position: fixed;
   z-index: $z-index-tabs;
   width: 100%;
   height: $tabs-height;
 }
 
+.jf-tabs-bg {
+  background: $light;
+}
+
 .jf-tabs-bottom-search {
+  @extend .jf-tabs-bg;
   bottom: $tabs-height;
   border: 1px solid $bar-light-border;
-  background: $light;
 }
 
 .jf-tabs-bottom-text {
@@ -23,4 +27,11 @@
   @extend .jf-text-center;
   font-size: $jf-text-size-middle;
   line-height: $tabs-height;
+}
+
+.jf-tabs-price-bottom {
+  width: 100%;
+  height: $tabs-height;
+  @include display-flex();
+  @include justify-content(center);
 }

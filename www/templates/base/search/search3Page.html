@@ -1,3 +1,62 @@
-<div>
-  ccccccccccc
+<div class="jf-width-100" ng-class="{'animated slideInDown':page.s3}">
+  <div style="width: 100%;" ng-style="spageHeight">
+    <ul style="padding-top: 20px;">
+      <li>&nbsp;&nbsp;自定义价格</li>
+    </ul>
+    <form name="priceForm">
+      <table style="width: 100%">
+        <tbody>
+          <tr class="row">
+            <!--<th class="col col-1"></th>-->
+            <th class="col col-30">
+              <label class="item item-input">
+                <input type="text" ng-model="nowPrice.lowPrice" name="lowPrice" ng-pattern="/^((\d+)|(0+))$/">
+                <span class="input-label">{{'CAR.PRICE.UNIT'|i18n}}</span>
+              </label>
+            </th>
+            <th class="col col-5" style="text-align: center;vertical-align: middle;padding-top: 18px;">-</th>
+            <th class="col col-30">
+              <label class="item item-input">
+                <input type="text" ng-model="nowPrice.highPrice" name="highPrice" ng-pattern="/^((\d+)|(0+))$/">
+                <span class="input-label">{{'CAR.PRICE.UNIT'|i18n}}</span>
+              </label>
+            </th>
+            <th class="col col-4"></th>
+            <th class="col col-30">
+              <button class="button button-light" style="width: 100%;" ng-click="priceConfirm();">
+                {{'BASE.COMFIRM'|i18n}}
+              </button>
+            </th>
+          </tr>
+          <tr class="row">
+            <th class="col col-5"></th>
+            <th>
+              <font color="red">{{priceErrMsg}}</font>
+              <font color="red" ng-show="!priceForm.lowPrice.$valid || !priceForm.highPrice.$valid">
+                {{'ALERT.POSITIVE_NUM'|i18n}}
+              </font>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <table style="width: 100%;">
+      <tbody>
+        <tr class="row" ng-repeat="priceGroup in prices">
+          <th class="col col-33 col-center" ng-repeat="priceItem in priceGroup track by $index">
+            <button class="button" style="width: 90%;height: 30px;"
+                    ng-class="{'button-assertive':priceItem.choose,'button-light':!priceItem.choose}"
+                    ng-click="choosePrice(priceItem);">
+            {{priceItem.name}}
+            </button>
+          </th>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <div class="jf-tabs-bg jf-tabs-price-bottom">
+    <a class="button icon-left ion-chevron-up button-clear button-dark" ng-click="showSearchItem();"></a>
+  </div>
 </div>

@@ -14,6 +14,7 @@ requirejs.config({
   paths: {
     config: './cfg/config',
     lang: './cfg/lang',
+    //enums: './enum/Enum',
     sprintf: './util/sprintf',
 
     tweenMax: '../lib/gsap/src/minified/TweenMax.min',

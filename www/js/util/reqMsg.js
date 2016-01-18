@@ -14,6 +14,34 @@ define(
     return function ($http) {
       var host = config.local_url;
       return {
+        // 根据条件查询车辆数量 request
+        queryCarNum: function (data) {
+          var msgData = {};
+          msgData.msgType = 10301;
+          // 查询条件列表
+          msgData.queryList = data.queryList;
+          var attrs = {};
+          
+
+          return $http.post(host + 'game', msgData, attrs);
+        },
+        // 根据条件查询车辆数量 request
+        queryCarList: function (data) {
+          var msgData = {};
+          msgData.msgType = 10303;
+          // 查询条件列表
+          msgData.queryList = data.queryList;
+          // 当前查询页
+          msgData.pageNo = data.pageNo;
+          // 查询页容量
+          msgData.pageSize = data.pageSize;
+          // 排序key
+          msgData.order = data.order;
+          var attrs = {};
+          
+
+          return $http.post(host + 'game', msgData, attrs);
+        },
         // 注册 request
         register: function (data) {
           var msgData = {};
@@ -68,6 +96,15 @@ define(
         getUserInfo: function (data) {
           var msgData = {};
           msgData.msgType = 10209;
+          var attrs = {};
+          
+
+          return $http.post(host + 'game', msgData, attrs);
+        },
+        // 获取基础信息 request
+        loadInitData: function (data) {
+          var msgData = {};
+          msgData.msgType = 10211;
           var attrs = {};
           
 

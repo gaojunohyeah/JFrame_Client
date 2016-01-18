@@ -10,6 +10,18 @@ define(
   function () {
     return {
       
+      // 根据条件查询车辆数量
+      CAR_QUERYCARNUM : 10301,
+      
+      // 根据条件查询车辆数量返回
+      CAR_QUERYCARNUMBACK : 10302,
+      
+      // 根据条件查询车辆数量
+      CAR_QUERYCARLIST : 10303,
+      
+      // 根据条件查询车辆数量返回
+      CAR_QUERYCARLISTBACK : 10304,
+      
       // 注册
       USER_REGISTER : 10201,
       
@@ -39,6 +51,12 @@ define(
       
       // 获取玩家信息返回
       USER_GETUSERINFOBACK : 10210,
+      
+      // 获取基础信息
+      USER_LOADINITDATA : 10211,
+      
+      // 获取基础信息返回
+      USER_LOADINITDATABACK : 10212,
       
     }
   }

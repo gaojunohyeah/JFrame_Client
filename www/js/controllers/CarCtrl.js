@@ -46,7 +46,7 @@ define([],
          * @param carItem 车对象
          */
         $scope.showCarDetail = function (carItem) {
-          alert("heihei");
+          //alert("heihei");
         };
 
         /**
@@ -56,7 +56,7 @@ define([],
           // 获取当前查询条件
           //var curSitem = searchItemSrv.curSitem;
 
-          alert("haha");
+          //alert("haha");
         };
 
         // 首次加载买车controller时需要主动查询一次

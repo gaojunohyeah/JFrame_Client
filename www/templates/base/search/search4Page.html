@@ -1,3 +1,56 @@
-<div>
-  dddddddddddd
+<div class="jf-width-100" ng-class="{'animated slideInDown':page.s4}">
+  <ion-scroll zooming="true" direction="y" class="jf-width-100" ng-style="spageHeight">
+    <ul>
+      <li>&nbsp;&nbsp;{{'CAR.TAG'|i18n}}</li>
+      <li ng-repeat="gtags in tags" class="row">
+        <div class="col col-25 col-center" ng-repeat="tag in gtags track by $index">
+          <button class="button button-small"
+                  ng-class="{'button-assertive':tag.choose,'button-light':!tag.choose}"
+                  style="width: 100%;height: 40px;"
+                  ng-click="chooseOthers(tag, 'tag');">
+            {{tag.name}}
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <ul>
+      <li>&nbsp;&nbsp;{{'CAR.CARTYPE'|i18n}}</li>
+      <li ng-repeat="gcarTypes in carTypes" class="row">
+        <div class="col col-25 col-center" ng-repeat="carType in gcarTypes track by $index">
+          <button class="button button-small"
+                  ng-class="{'button-assertive':carType.choose,'button-light':!carType.choose}"
+                  style="width: 100%;height: 40px;"
+                  ng-click="chooseOthers(carType, 'cartype');">
+            {{carType.name}}
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <ul>
+      <li>&nbsp;&nbsp;{{'CAR.COLOR'|i18n}}</li>
+      <li ng-repeat="gcolors in colors" class="row">
+        <div class="col col-25 col-center" ng-repeat="color in gcolors track by $index">
+          <button class="button button-small"
+                  ng-class="{'button-assertive':color.choose,'button-light':!color.choose}"
+                  style="width: 100%;height: 40px;"
+                  ng-click="chooseOthers(color, 'color');">
+            {{color.name}}
+          </button>
+        </div>
+      </li>
+    </ul>
+  </ion-scroll>
+
+  <div class="jf-tabs-bottom jf-tabs-bottom-search">
+    <div class="jf-tabs-bottom-text">
+      {{"BASE.SEARCH.CARNUM"|i18n:queryNum}}
+    </div>
+    <div class="jf-width-30 jf-float-right">
+      <button class="button button-assertive jf-width-100" ng-click="othersConfirm();">
+        {{"BASE.SEARCH.WATCH"|i18n}}
+      </button>
+    </div>
+  </div>
 </div>

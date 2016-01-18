@@ -23,7 +23,7 @@ define([
      * 系统启动后会根据app端或是web端进行local_url设置
      */
     l_web_url: "http://" + window.location.hostname + ":8100/server/",
-    l_dev_url: "http://192.168.111.119:3000/",
+    l_dev_url: "http://192.168.111.116:3000/",
     local_url: "",
 
     // default language

@@ -8,9 +8,14 @@ define([
   function (config) {
     'use strict';
 
-    return ['$scope', '$rootScope', '$state', 'dataSrv',
-      function ($scope, $rootScope, $state, dataSrv) {
+    return ['$scope', '$rootScope', '$state', 'dataSrv', '$anchorScroll',
+      function ($scope, $rootScope, $state, dataSrv, $anchorScroll) {
         $rootScope.config = config;
+
+        $rootScope.goto = function (id) {
+          $location.hash(id);
+          $anchorScroll();
+        };
 
         /**
          * 初始化，获取服务端一些必备数据
