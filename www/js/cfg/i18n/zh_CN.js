@@ -86,9 +86,10 @@ define(
       'CAR.BRAND.AODI': '奥迪',
 
       'CAR.TAG': '推荐标签',
-      'CAR.TAG.TAG1': '性价比高',
+      'CAR.TAG.TAG1': '超值',
       'CAR.TAG.TAG2': '车主急售',
       'CAR.TAG.TAG3': '准新车',
+      'CAR.TAG.TAG4': '性价比高',
 
       'CAR.COLOR': '车辆颜色',
 

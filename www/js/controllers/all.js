@@ -19,10 +19,11 @@ define(
     './SellCtrl',
     './UserCtrl',
     './SearchPageCtrl',
+    './CarDetailCtrl',
   ],
   function (angular, _, config
     , appCtrl, loginCtrl, signupCtrl, homeCtrl, carCtrl, settingCtrl
-    , sellCtrl, userCtrl, searchPageCtrl) {
+    , sellCtrl, userCtrl, searchPageCtrl, carDetailCtrl) {
     'use strict';
 
     var module = angular.module(config.name + '.controllers', []);
@@ -36,5 +37,6 @@ define(
     module.controller('sellCtrl', sellCtrl);
     module.controller('userCtrl', userCtrl);
     module.controller('searchPageCtrl', searchPageCtrl);
+    module.controller('carDetailCtrl', carDetailCtrl);
   }
 );

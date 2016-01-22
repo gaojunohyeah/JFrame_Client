@@ -9263,7 +9263,7 @@ a.button {
     position: absolute;
     z-index: -1; }
   .jf-banner .jf-banner-title {
-    padding-top: 50px;
+    padding-top: 40px;
     width: 100%;
     text-align: center; }
   .jf-banner .jf-banner-subtitle {
@@ -9279,6 +9279,11 @@ a.button {
 .jf-search-banner {
   width: 100%;
   height: 44px;
+  z-index: 8;
+  position: absolute; }
+
+.jf-car-detail-banner {
+  width: 100%;
   z-index: 8;
   position: absolute; }
 

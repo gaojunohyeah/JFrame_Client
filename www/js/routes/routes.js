@@ -69,6 +69,12 @@ define([
           abstract: true,
           templateUrl: 'templates/main/main.html'
         })
+        .state('carDetail', {
+          cache: false,
+          url: '/carDetail/:id',
+          templateUrl: 'templates/car/detail.html',
+          controller: 'carDetailCtrl'
+        })
       ;
 
       // if none of the above states are matched, use this as the fallback

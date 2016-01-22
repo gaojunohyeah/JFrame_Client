@@ -22,6 +22,12 @@ define(
       // 根据条件查询车辆数量返回
       CAR_QUERYCARLISTBACK : 10304,
       
+      // 获取车辆详细信息
+      CAR_QUERYCARINFO : 10305,
+      
+      // 根据条件查询车辆数量返回
+      CAR_QUERYCARINFOBACK : 10306,
+      
       // 注册
       USER_REGISTER : 10201,
       

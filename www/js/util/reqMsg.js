@@ -37,6 +37,19 @@ define(
           msgData.pageSize = data.pageSize;
           // 排序key
           msgData.order = data.order;
+          // 排序类型(1升序 2降序)
+          msgData.orderType = data.orderType;
+          var attrs = {};
+          
+
+          return $http.post(host + 'game', msgData, attrs);
+        },
+        // 获取车辆详细信息 request
+        queryCarInfo: function (data) {
+          var msgData = {};
+          msgData.msgType = 10305;
+          // 车辆唯一id
+          msgData.carId = data.carId;
           var attrs = {};
           
 

@@ -1,0 +1,24 @@
+<div class="jf-car-detail-banner">
+  <button ng-click="$ionicGoBack()" class="button buttons button-clear"
+          style="float:left;">
+    <i class="icon ion-ios-arrow-back"></i>
+  </button>
+  <button ng-click="" class="button buttons button-clear"
+          style="float:right">
+    <i class="icon ion-forward"></i>
+  </button>
+</div>
+
+<ion-content has-bouncing="false">
+  <div style="width:100%;height: 200px;">
+    <ion-slide-box on-slide-changed="carDetailSlide($index)" delegate-handle="carDetailSlideImgs"
+                   does-continue="true" show-pager="false">
+      <ion-slide ng-repeat="img in carInfo.imgList" repeat-done="repeatDone()">
+        <div><img src="{{img.imgUrl}}" class="jf-home-slide"></div>
+      </ion-slide>
+    </ion-slide-box>
+    <div style="position: absolute;bottom:5px;left:5px;">{{nowSlideIndex}}/{{carInfo.imgSize}}</div>
+  </div>
+
+  
+</ion-content>

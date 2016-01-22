@@ -26,6 +26,8 @@ define([
     l_dev_url: "http://192.168.111.116:3000/",
     local_url: "",
 
+    resource_url: "http://192.168.111.116:3333",
+
     // default language
     default_language: "zh_CN",
     // all available language
@@ -39,6 +41,12 @@ define([
      * default value : 30 minutes
      */
     cookie_expiration_time: 30 * 60 * 1000,
+
+    /*
+     * default per search result page size
+     * default value : 2
+     */
+    default_page_size: 2,
   };
 
   // This initializes a new hash on purpose, to avoid adding parameters to

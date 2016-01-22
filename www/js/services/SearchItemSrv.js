@@ -3,12 +3,24 @@
  */
 
 define(
-  [],
-  function () {
+  [
+    'config',
+  ],
+  function (config) {
     'use strict';
 
     return ['$filter', 'reqSrv', 'baseSitemSrv', 'enums',
       function ($filter, reqSrv, baseSitemSrv, enums) {
+        // 分页信息
+        var pageNo = 1;
+        var pageSize = config.default_page_size;
+        var order = null;
+        var orderType = enums.base.ASC;
+        var reload = true;
+
+        // 总数据量
+        var totalNum = 0;
+
         // 查询条件城市id集
         var citys = [];
         // 查询条件价格区间
@@ -46,6 +58,49 @@ define(
 
         this.getColors = function () {
           return colors;
+        };
+
+        this.getPageNo = function () {
+          return pageNo;
+        };
+
+        this.setPageNo = function (pno) {
+          pageNo = pno;
+        };
+
+        this.getPageSize = function () {
+          return pageSize;
+        };
+
+        this.setPageSize = function (psize) {
+          pageSize = psize;
+        };
+
+        this.getOrder = function () {
+          return [order, orderType];
+        };
+
+        this.setOrder = function (ord, ordType) {
+          if (!_.isUndefined(ord) && !_.isNull(ord)) {
+            order = ord;
+            orderType = ordType;
+          }
+        };
+
+        this.getReload = function () {
+          return reload;
+        };
+
+        this.setReload = function (re) {
+          reload = re;
+        };
+
+        this.getTotalNum = function () {
+          return totalNum;
+        };
+
+        this.setTotalNum = function (num) {
+          totalNum = num;
         };
 
         // 首页快速搜索
@@ -235,7 +290,7 @@ define(
             var lowerPrice = {
               key: enums.car.key.price,
               oper: enums.base.operator.gte,
-              value: parseFloat(price[0]) * 10000
+              value: parseFloat(price[0])
             };
 
             params.push(lowerPrice);
@@ -244,7 +299,7 @@ define(
             var highPrice = {
               key: enums.car.key.price,
               oper: enums.base.operator.lte,
-              value: parseFloat(price[1]) * 10000
+              value: parseFloat(price[1])
             };
 
             params.push(highPrice);
@@ -275,7 +330,7 @@ define(
           if (!_.isEmpty(tags)) {
             var tagParam = {
               key: enums.car.key.tag,
-              oper: enums.base.operator.in,
+              oper: enums.base.operator.likeany,
               value: tags
             };
 
@@ -324,10 +379,25 @@ define(
          * 获取查询结果
          */
         this.query = function () {
+          var queryParams = buildQueryParams();
 
+          // 参数
+          var param = {
+            queryList: queryParams,
+            pageNo: pageNo,
+            pageSize: pageSize,
+          };
+
+          // 需要排序
+          if (!_.isUndefined(order) && !_.isNull(order)) {
+            param.order = order;
+            param.orderType = orderType;
+          }
+
+          // 请求查询车辆
+          return reqSrv.queryCarList(param);
         }
       }
     ];
   }
-)
-;
+);

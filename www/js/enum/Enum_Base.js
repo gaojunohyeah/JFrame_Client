@@ -28,9 +28,14 @@ define(
         contains: '$contains',      // $contains: [1, 2]              // @> [1, 2] (PG array contains operator)
         contained: '$contained',    // $contained: [1, 2]             // <@ [1, 2] (PG array contained by operator)
         any: '$any',                // $any: [2,3]                    // ANY ARRAY[2, 3]::INTEGER (PG only)
+        likeany: '$likeany',        // LIKE ANY ARRAY['cat', 'hat'] - also works for iLike and notLike
 
         col: '$col',                // $col: 'user.organization_id'   // = "user"."organization_id", with dialect specific column identifiers, PG in this example
       },
+
+      // 排序(升序 降序)
+      ASC : 1,
+      DESC : 2,
     }
   }
 );

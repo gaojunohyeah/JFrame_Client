@@ -17,28 +17,30 @@
 
   <ion-content has-bouncing="false" style="top:73px;">
     <ul class="list">
-      <li class="item jf-item-small" ng-repeat="carItem in carItems" ng-click="showCarDetail(item);">
-        <img src="img/yiliya.png" width="20%" height="auto">
+      <li class="item jf-item-small" ng-repeat="carItem in carItems" ng-click="showCarDetail(carItem);">
+        <img src="{{carItem.showImg}}" width="20%" height="auto">
 
         <div class="jf-item-small-content">
           <div  class="jf-item-subdiv">
-            <h3>carItem.modelName</h3>
+            <h3>{{carItem.seriesName}}&nbsp;&nbsp;{{carItem.modelName}}</h3>
           </div>
 
           <div class="jf-item-subdiv">
             <h2 class="jf-item-left" style="color: red;">
-              carItem.price{{"CAR.PRICE.UNIT"|i18n}}&nbsp;&nbsp;&nbsp;&nbsp;
+              {{carItem.price}}{{"CAR.PRICE.UNIT"|i18n}}&nbsp;&nbsp;&nbsp;&nbsp;
             </h2>
 
             <div style="padding-top: 5px;">
-              <h4 style="color: grey;">carItem.startTime 1.21{{"CAR.PRICE.DISTANCE"|i18n}}</h4>
+              <h4 style="color: grey;">{{carItem.startTime}} {{carItem.distance}}{{"CAR.PRICE.DISTANCE"|i18n}}</h4>
             </div>
           </div>
 
           <div class="jf-item-subdiv">
-            <div class="jf-item-left" ng-repeat="tag in carItem.tags">
+            <div class="jf-item-left" ng-repeat="tag in carItem.tag">
               <button class="button jf-img-small button-outline"
-                      ng-class="{'button-positive':tag==1,'button-energized':tag==2,'button-balanced':tag==3,}">
+                      ng-class="{'button-positive':tag==1,'button-energized':tag==2
+                      ,'button-balanced':tag==3,'button-assertive':tag==4
+                      ,'button-royal':tag==5,'button-calm':tag==6}">
                 {{"CAR.TAG.TAG"+tag|i18n}}
               </button>
               &nbsp;

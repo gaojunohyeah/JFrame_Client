@@ -9,11 +9,14 @@ define(
     'lodash',
     'config',
 
+    './RepeatDone',
   ],
-  function (angular, _, config) {
+  function (angular, _, config
+    , repeatDone) {
     'use strict';
 
     var module = angular.module(config.name + '.directives', []);
 
+    module.directive('repeatDone', repeatDone);
   }
 );

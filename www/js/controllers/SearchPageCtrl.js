@@ -355,7 +355,8 @@ define(
           var maxLowPrice = parseInt(maxLowPitem['query'][0]['value']);
 
           // 上限价格不为0或者下限价格达到最大
-          if (highPrice > 0 || lowPrice == maxLowPrice) {
+          if (highPrice > 0 || lowPrice == maxLowPrice
+            || (highPrice == 0 && lowPrice == 0)) {
             // 更新价格
             searchItemSrv.refreshPrices([lowPrice, highPrice]);
 
