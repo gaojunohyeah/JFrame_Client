@@ -29,6 +29,7 @@ define([
           controller: 'signupCtrl'
         })
         .state('main.home', {
+          cache: false,
           url: '/home',
           views: {
             'tab1': {

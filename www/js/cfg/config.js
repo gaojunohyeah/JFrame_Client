@@ -47,6 +47,12 @@ define([
      * default value : 2
      */
     default_page_size: 2,
+
+    /*
+     * default price unit
+     * default value : 10000
+     */
+    default_price_unit: 10000,
   };
 
   // This initializes a new hash on purpose, to avoid adding parameters to

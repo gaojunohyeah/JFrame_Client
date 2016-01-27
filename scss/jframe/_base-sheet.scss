@@ -4,8 +4,112 @@
  * --------------------------------------------------
  */
 
+.jf-text-left {
+  text-align: left;
+}
+
 .jf-text-center {
   text-align: center;
+}
+
+.jf-text-right {
+  text-align: right;
+}
+
+.jf-text-line-through {
+  text-decoration: line-through;
+}
+
+.jf-text-light {
+  color: $light;
+}
+
+.jf-text-stable {
+  color: $stable;
+}
+
+.jf-text-positive {
+  color: $positive;
+}
+
+.jf-text-calm {
+  color: $calm;
+}
+
+.jf-text-balanced {
+  color: $balanced;
+}
+
+.jf-text-energized {
+  color: $energized;
+}
+
+.jf-text-assertive {
+  color: $assertive;
+}
+
+.jf-text-royal {
+  color: $royal;
+}
+
+.jf-text-dark {
+  color: $dark;
+}
+
+.jf-text-red {
+  color: red;
+}
+
+.jf-text-grey {
+  color: grey;
+}
+
+.jf-bg-light {
+  background: $light;
+}
+
+.jf-bg-stable {
+  background: $stable;
+}
+
+.jf-bg-positive {
+  background: $positive;
+}
+
+.jf-bg-calm {
+  background: $calm;
+}
+
+.jf-bg-balanced {
+  background: $balanced;
+}
+
+.jf-bg-energized {
+  background: $energized;
+}
+
+.jf-bg-assertive {
+  background: $assertive;
+}
+
+.jf-bg-royal {
+  background: $royal;
+}
+
+.jf-bg-dark {
+  background: $dark;
+}
+
+.jf-bg-red {
+  background: red;
+}
+
+.jf-bg-grey {
+  background: grey;
+}
+
+.jf-bg-light-grey {
+  background: #CCCCCC;
 }
 
 .jf-width-10 {
@@ -55,3 +159,21 @@
 .jf-float-right {
   float: right;
 }
+
+.jf-pos-relative {
+  position: relative;
+}
+
+.jf-pos-absolute {
+  position: absolute;
+}
+
+.jf-display-inline {
+  display: inline;
+}
+
+.jf-padding-top-6 {
+  padding-top: 6px;
+}
+
+

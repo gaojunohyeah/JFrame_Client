@@ -1,24 +1,160 @@
 <div class="jf-car-detail-banner">
-  <button ng-click="$ionicGoBack()" class="button buttons button-clear"
-          style="float:left;">
+  <button ng-click="$ionicGoBack()" class="button buttons button-clear jf-float-left">
     <i class="icon ion-ios-arrow-back"></i>
   </button>
-  <button ng-click="" class="button buttons button-clear"
-          style="float:right">
+  <button ng-click="" class="button buttons button-clear jf-float-right">
     <i class="icon ion-forward"></i>
   </button>
 </div>
 
 <ion-content has-bouncing="false">
-  <div style="width:100%;height: 200px;">
+  <div class="jf-banner jf-pos-relative">
     <ion-slide-box on-slide-changed="carDetailSlide($index)" delegate-handle="carDetailSlideImgs"
                    does-continue="true" show-pager="false">
       <ion-slide ng-repeat="img in carInfo.imgList" repeat-done="repeatDone()">
         <div><img src="{{img.imgUrl}}" class="jf-home-slide"></div>
       </ion-slide>
     </ion-slide-box>
-    <div style="position: absolute;bottom:5px;left:5px;">{{nowSlideIndex}}/{{carInfo.imgSize}}</div>
+    <div class="jf-left-subscript">{{nowSlideIndex}}/{{carInfo.imgSize}}</div>
   </div>
 
-  
+  <div id="carBase" class="row">
+    <div class="col-3"></div>
+    <div class="col-94">
+      <div class="row jf-text-left">
+        <h3>{{carInfo.seriesName}}&nbsp;&nbsp;{{carInfo.modelName}}</h3>
+      </div>
+      <div class="row">
+        <div class="col-20 jf-text-left">
+          <h3 class="jf-text-assertive jf-display-inline">{{carInfo.price}}</h3>
+          <h4 class="jf-text-assertive jf-display-inline">{{"CAR.PRICE.UNIT"|i18n}}</h4>
+        </div>
+        <div class="col-33 col-bottom">
+          {{"CAR.NEW.DESC"|i18n}}
+          <SPAN class="jf-text-line-through">{{12.35}}{{"CAR.PRICE.UNIT"|i18n}}</SPAN>
+        </div>
+        <div class="col-47 col-bottom jf-text-right">
+          <span class="jf-text-assertive">
+            <i class="icon ion-levels"></i>
+            {{"CAR.PRICE.ANALYSIS"|i18n}}
+            <i class="icon ion-chevron-down"></i>
+          </span>
+        </div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col jf-bg-light-grey">
+          <div class="jf-float-left">
+            &nbsp;
+            <span class="jf-text-light jf-bg-assertive">{{"CAR.PRICE.DAI"|i18n}}</span>
+            <span>{{"CAR.PRICE.FIRSTPAY"|i18n}}{{carInfo.firstLoanDesc}}</span>
+            &nbsp;&nbsp;
+            <span>{{"CAR.PRICE.MONTHPAY"|i18n}}{{carInfo.monthLoanDesc}}</span>
+          </div>
+          <div class="jf-float-right jf-text-assertive">
+            {{"BASE.APPLY"|i18n}}&nbsp;
+          </div>
+        </div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row jf-text-left">
+        {{"CAR.PRICE.SERVICE"|i18n}}：
+        <span class="jf-text-assertive">{{carInfo.srvDesc}}</span>
+        {{"CAR.PRICE.SERVICE.CAL"|i18n}}
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-50">
+          <i class="icon ion-android-checkbox-outline"></i>
+          {{"CAR.DESC1"|i18n}}
+        </div>
+        <div class="col-50">
+          <i class="icon ion-android-checkbox-outline"></i>
+          {{"CAR.DESC2"|i18n}}
+        </div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-50">
+          <i class="icon ion-android-checkbox-outline"></i>
+          {{"CAR.DESC3"|i18n}}
+        </div>
+        <div class="col-50 jf-car-detail-spacing">
+          <i class="icon ion-android-checkbox-outline"></i>
+          {{"CAR.DESC4"|i18n}}
+        </div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+    </div>
+    <div class="col-3"></div>
+  </div>
+
+  <div class="row jf-car-detail-devide"></div>
+
+  <div id="carInfo" class="row">
+    <div class="col-3"></div>
+
+    <div class="col-94">
+      <div class="row">
+        <div class="col-33">
+          <span style="font-size: 18px;">5.6万公里</span>
+        </div>
+        <div class="col-33">
+          <h4>3年6个月</h4>
+        </div>
+        <div class="col-33">
+          <h4>北京</h4>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-33">
+          <h5>行驶里程</h5>
+        </div>
+        <div class="col-33">
+          <h5>2012-07上牌</h5>
+        </div>
+        <div class="col-33">
+          <h5>车辆所在地</h5>
+        </div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-33">
+          aaaa
+        </div>
+        <div class="col-33">
+          bbb
+        </div>
+        <div class="col-33">
+          ccc
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-33">
+          aaaa
+        </div>
+        <div class="col-33">
+          bbb
+        </div>
+        <div class="col-33">
+          ccc
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3"></div>
+  </div>
 </ion-content>

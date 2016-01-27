@@ -10,9 +10,9 @@ define(
     'use strict';
 
     return ['$scope', 'searchItemSrv', 'enums', 'dataSrv', '$stateParams'
-      , 'reqSrv', '$ionicSlideBoxDelegate',
+      , 'reqSrv', '$ionicSlideBoxDelegate', '$filter',
       function ($scope, searchItemSrv, enums, dataSrv, $stateParams
-        , reqSrv, $ionicSlideBoxDelegate) {
+        , reqSrv, $ionicSlideBoxDelegate, $filter) {
         var carId = $stateParams.id;
 
         $scope.carInfo = {};
@@ -46,12 +46,38 @@ define(
                 color: result.data.color,
                 tag: result.data.tag,
 
+                srvPrice: result.data.srvPrice,
+                firstLoanPrice: result.data.firstLoanPrice,
+                monthLoanPrice: result.data.monthLoanPrice,
+
                 seriesId: result.data.seriesId,
                 modelId: result.data.modelId,
                 modelName: result.data.modelName,
                 carType: result.data.carType,
                 transmission: result.data.transmission,
               };
+
+              // 价格计算
+              var srvPrice = $scope.carInfo.srvPrice / config.default_price_unit;
+              if (srvPrice >= 1) {
+                $scope.carInfo.srvDesc = $filter('i18n')("CAR.PRICE.UNIT.NUM", srvPrice);
+              } else {
+                $scope.carInfo.srvDesc = $filter('i18n')("CAR.PRICE.BASE.NUM", $scope.carInfo.srvPrice);
+              }
+
+              var firstLoanPrice = $scope.carInfo.firstLoanPrice / config.default_price_unit;
+              if (firstLoanPrice >= 1) {
+                $scope.carInfo.firstLoanDesc = $filter('i18n')("CAR.PRICE.UNIT.NUM", firstLoanPrice);
+              } else {
+                $scope.carInfo.firstLoanDesc = $filter('i18n')("CAR.PRICE.BASE.NUM", $scope.carInfo.firstLoanPrice);
+              }
+
+              var monthLoanPrice = $scope.carInfo.monthLoanPrice / config.default_price_unit;
+              if (monthLoanPrice >= 1) {
+                $scope.carInfo.monthLoanDesc = $filter('i18n')("CAR.PRICE.UNIT.NUM", monthLoanPrice);
+              } else {
+                $scope.carInfo.monthLoanDesc = $filter('i18n')("CAR.PRICE.BASE.NUM", $scope.carInfo.monthLoanPrice);
+              }
 
               // 城市
               var city = dataSrv.getCitys()['' + result.data.city];

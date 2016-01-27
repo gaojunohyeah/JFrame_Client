@@ -50,3 +50,19 @@
   z-index: $jf-z-index-search-banner;
   position: absolute;
 }
+
+.jf-left-subscript {
+  @extend .jf-pos-absolute;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+.jf-car-detail-spacing {
+  height: 20px;
+}
+
+.jf-car-detail-devide {
+  @extend .jf-bg-light-grey;
+  height: 20px;
+}

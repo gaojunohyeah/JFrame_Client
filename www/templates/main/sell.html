@@ -1,15 +1,173 @@
-<!--<ion-view title="Site Default Page">-->
-<!--<ion-content padding="'true'" class="has-header">-->
-<!--</ion-content>-->
-<!--</ion-view>-->
-<ion-nav-bar class="bar-stable">
-  <ion-nav-back-button>
-  </ion-nav-back-button>
-  <ion-view title="haha">
-    <ion-content padding="'true'" class="has-header">
-      <button class="button button-stable button-block " ng-click="logout()">{{'USER.LOGOUT'|i18n}}</button>
+<ion-view class="jf-animate-in-secondary">
+  <div class="bar bar-header bar-stable">
+    <div class="row">
+      <div class="col-10"></div>
+      <div class="col-80 jf-text-center" style="font-size: 20px;">
+        我要卖车
+      </div>
+      <div class="col-10 jf-text-center" style="font-size: 20px;">
+        <i class="icon ion-ios-telephone-outline"></i>
+      </div>
+    </div>
+  </div>
 
-      <img src="img/yiliya.png" width="50%" height="auto" style="width: 50%; height: auto;">
-    </ion-content>
-  </ion-view>
-</ion-nav-bar>
+  <ion-content has-bouncing="false" style="top:44px;" class="jf-bg-light">
+    <img style="width: 100%;height: auto;" src="img/car/sell1.png">
+
+    <div style="width: 100%;">
+      <div class="row jf-car-detail-spacing"></div>
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-80">
+          <button class="button button-small button-assertive" style="width: 100%;height: 35px;">
+            咨询 400-050-6093
+          </button>
+        </div>
+        <div class="col-10"></div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-50" style="padding-top: 1px;">
+          <label class="item item-input" style="width: 100%;height: 35px;">
+            <input type="text" ng-model="home.stext" placeholder="请输入电话号码" ng-blur="">
+          </label>
+        </div>
+        <div class="col-30">
+          <button class="button button-small button-assertive" style="float:left;width:100%;height: 35px;">
+            预约卖车
+          </button>
+        </div>
+        <div class="col-10"></div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-80" style="height: 1px;border-top: 1px solid #ddd;"></div>
+        <div class="col-10"></div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col jf-text-center" style="padding-top: 0;">
+          <span>心里有底&nbsp;才卖不亏&nbsp;</span>
+          <span class="jf-text-assertive">估个价先></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row jf-user-devide"></div>
+
+    <img style="width: 100%;height: auto;" src="img/car/sell2.png">
+
+    <div class="row jf-user-devide"></div>
+
+    <img style="width: 100%;height: auto;" src="img/car/sell3.png">
+
+    <div class="row jf-user-devide"></div>
+
+    <img style="width: 100%;height: auto;" src="img/car/sell4.png">
+
+    <div class="row jf-user-devide"></div>
+
+    <div class="jf-bg-light" style="width: 100%;">
+
+      <ul class="list">
+        <li class="item">
+          <div class="row jf-car-detail-spacing"></div>
+
+          <div class="row">
+            <div class="col-25"></div>
+            <div class="col-10 jf-center">
+              <hr style="height:1px;border:none;border-top:1px solid #ddd;"/>
+            </div>
+            <div class="col-30 jf-text-center jf-text-assertive" style="font-size: 20px;">人人问答</div>
+            <div class="col-10 jf-center">
+              <hr style="height:1px;border:none;border-top:1px solid #ddd;"/>
+            </div>
+            <div class="col-25"></div>
+          </div>
+
+          <div class="row jf-car-detail-spacing"></div>
+        </li>
+
+        <li class="item item-body row" ng-repeat="question in questions">
+          <div class="col-3"></div>
+          <div class="col-94">
+            <div class="row" style="height: 40px;" ng-click="question.click=!question.click">
+              <div class="col-90">
+                {{question.question}}
+              </div>
+              <div class="col-10 col-center jf-text-center">
+                <i class="icon" ng-class="{'ion-chevron-down': !question.click, 'ion-chevron-up': question.click}"></i>
+              </div>
+            </div>
+
+            <div ng-show="question.click" ng-class="{'animated fadeIn':question.click}">
+              <p ng-repeat="answer in question.answer">
+                {{answer}}
+              </p>
+            </div>
+          </div>
+          <div class="col-3"></div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row jf-user-devide"></div>
+
+    <div style="width: 100%;">
+      <div class="row jf-car-detail-spacing"></div>
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-80">
+          <button class="button button-small button-assertive" style="width: 100%;height: 35px;">
+            咨询 400-050-6093
+          </button>
+        </div>
+        <div class="col-10"></div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-50" style="padding-top: 1px;">
+          <label class="item item-input" style="width: 100%;height: 35px;">
+            <input type="text" ng-model="home.stext" placeholder="请输入电话号码" ng-blur="">
+          </label>
+        </div>
+        <div class="col-30">
+          <button class="button button-small button-assertive" style="float:left;width:100%;height: 35px;">
+            预约卖车
+          </button>
+        </div>
+        <div class="col-10"></div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col-10"></div>
+        <div class="col-80" style="height: 1px;border-top: 1px solid #ddd;"></div>
+        <div class="col-10"></div>
+      </div>
+
+      <div class="row jf-car-detail-spacing"></div>
+
+      <div class="row">
+        <div class="col jf-text-center" style="padding-top: 0;">
+          <span>心里有底&nbsp;才卖不亏&nbsp;</span>
+          <span class="jf-text-assertive">估个价先></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row jf-user-devide"></div>
+  </ion-content>
+</ion-view>

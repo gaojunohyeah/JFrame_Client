@@ -326,7 +326,35 @@ define(
           }
         ];
 
-
+        /**
+         * 我要卖车页面的问题列表
+         * @type {Array}
+         */
+        this.sellQuestions = [
+          {
+            question: $filter('i18n')("CAR.SELL.QUES1"),
+            answer: [
+              $filter('i18n')("CAR.SELL.QUES1.ANSWER1"),
+              $filter('i18n')("CAR.SELL.QUES1.ANSWER2"),
+              $filter('i18n')("CAR.SELL.QUES1.ANSWER3"),
+              $filter('i18n')("CAR.SELL.QUES1.ANSWER4"),
+              $filter('i18n')("CAR.SELL.QUES1.ANSWER5"),
+            ]
+          },
+          {
+            question: $filter('i18n')("CAR.SELL.QUES2"),
+            answer: [
+              $filter('i18n')("CAR.SELL.QUES2.ANSWER1"),
+              $filter('i18n')("CAR.SELL.QUES2.ANSWER2"),
+            ]
+          },
+          {
+            question: $filter('i18n')("CAR.SELL.QUES3"),
+            answer: [
+              $filter('i18n')("CAR.SELL.QUES3.ANSWER1"),
+            ]
+          }
+        ];
       }
     ];
   }
