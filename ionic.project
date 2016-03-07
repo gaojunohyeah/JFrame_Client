@@ -4,7 +4,7 @@
   "proxies": [
     {
       "path": "/server/",
-      "proxyUrl": "http://192.168.111.116:3000/"
+      "proxyUrl": "http://120.25.195.147:3000/"
     }
   ],
   "gulpStartupTasks": [

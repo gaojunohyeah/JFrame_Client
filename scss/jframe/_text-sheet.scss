@@ -1,0 +1,80 @@
+/**
+ * {} Sheets
+ * Created by gaojun on 16/1/28.
+ * --------------------------------------------------
+ */
+
+.jf-text-left {
+  text-align: left;
+}
+
+.jf-text-center {
+  text-align: center;
+}
+
+.jf-text-right {
+  text-align: right;
+}
+
+.jf-text-line-through {
+  text-decoration: line-through;
+}
+
+.jf-text-light {
+  color: $light;
+}
+
+.jf-text-stable {
+  color: $stable;
+}
+
+.jf-text-positive {
+  color: $positive;
+}
+
+.jf-text-calm {
+  color: $calm;
+}
+
+.jf-text-balanced {
+  color: $balanced;
+}
+
+.jf-text-energized {
+  color: $energized;
+}
+
+.jf-text-assertive {
+  color: $assertive;
+}
+
+.jf-text-royal {
+  color: $royal;
+}
+
+.jf-text-dark {
+  color: $dark;
+}
+
+.jf-text-red {
+  color: red;
+}
+
+.jf-text-grey {
+  color: grey;
+}
+
+.jf-text-light-grey {
+  color: $jf-light-grey;
+}
+
+.jf-title-text {
+  @extend .jf-text-center;
+  font-size: $jf-text-size-title;
+}
+
+.jf-small-text {
+  @extend .jf-text-center;
+  font-size: $jf-text-size-small;
+}
+

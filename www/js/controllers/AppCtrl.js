@@ -12,6 +12,10 @@ define([
       function ($scope, $rootScope, $state, dataSrv, $anchorScroll) {
         $rootScope.config = config;
 
+        $rootScope.base = {
+          phone: config.phone,
+        };
+
         $rootScope.goto = function (id) {
           $location.hash(id);
           $anchorScroll();

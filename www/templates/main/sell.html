@@ -1,169 +1,169 @@
 <ion-view class="jf-animate-in-secondary">
   <div class="bar bar-header bar-stable">
     <div class="row">
-      <div class="col-10"></div>
-      <div class="col-80 jf-text-center" style="font-size: 20px;">
-        我要卖车
+      <div class="col col-10"></div>
+      <div class="col col-80 jf-title-text">
+        {{"CAR.TITLE.SELL"|i18n}}
       </div>
-      <div class="col-10 jf-text-center" style="font-size: 20px;">
+      <div class="col col-10 jf-title-text">
         <i class="icon ion-ios-telephone-outline"></i>
       </div>
     </div>
   </div>
 
-  <ion-content has-bouncing="false" style="top:44px;" class="jf-bg-light">
-    <img style="width: 100%;height: auto;" src="img/car/sell1.png">
+  <ion-content has-bouncing="false" class="jf-bg-light jf-top-title">
+    <img class="jf-img-100" src="img/car/sell1.png">
 
-    <div style="width: 100%;">
+    <div class="jf-width-100">
       <div class="row jf-car-detail-spacing"></div>
       <div class="row">
-        <div class="col-10"></div>
-        <div class="col-80">
-          <button class="button button-small button-assertive" style="width: 100%;height: 35px;">
-            咨询 400-050-6093
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <button class="button button-small button-assertive jf-sell-advisory">
+            {{"BASE.ADVISORY"|i18n}}&nbsp;{{base.phone}}
           </button>
         </div>
-        <div class="col-10"></div>
+        <div class="col col-10"></div>
       </div>
 
       <div class="row jf-car-detail-spacing"></div>
 
       <div class="row">
-        <div class="col-10"></div>
-        <div class="col-50" style="padding-top: 1px;">
-          <label class="item item-input" style="width: 100%;height: 35px;">
-            <input type="text" ng-model="home.stext" placeholder="请输入电话号码" ng-blur="">
+        <div class="col col-10"></div>
+        <div class="col col-50 jf-sell-phone-padding">
+          <label class="item item-input jf-sell-advisory">
+            <input type="text" ng-model="home.stext" placeholder="{{'BASE.INPUT.PHONE'|i18n}}" ng-blur="">
           </label>
         </div>
-        <div class="col-30">
-          <button class="button button-small button-assertive" style="float:left;width:100%;height: 35px;">
-            预约卖车
+        <div class="col col-30">
+          <button class="button button-small button-assertive jf-float-left jf-sell-advisory">
+            {{"CAR.SELL.PREPARE"|i18n}}
           </button>
         </div>
-        <div class="col-10"></div>
+        <div class="col col-10"></div>
       </div>
 
       <div class="row jf-car-detail-spacing"></div>
 
       <div class="row">
-        <div class="col-10"></div>
-        <div class="col-80" style="height: 1px;border-top: 1px solid #ddd;"></div>
-        <div class="col-10"></div>
+        <div class="col col-10"></div>
+        <div class="col col-80 jf-line-horizontal"></div>
+        <div class="col col-10"></div>
       </div>
 
       <div class="row jf-car-detail-spacing"></div>
 
       <div class="row">
-        <div class="col jf-text-center" style="padding-top: 0;">
-          <span>心里有底&nbsp;才卖不亏&nbsp;</span>
-          <span class="jf-text-assertive">估个价先></span>
+        <div class="col jf-text-center">
+          <span>{{"CAR.SELL.DESC1"|i18n}}&nbsp;{{"CAR.SELL.DESC2"|i18n}}&nbsp;</span>
+          <span class="jf-text-assertive">{{"CAR.SELL.RATE"|i18n}}</span>
         </div>
       </div>
     </div>
 
     <div class="row jf-user-devide"></div>
 
-    <img style="width: 100%;height: auto;" src="img/car/sell2.png">
+    <img class="jf-img-100" src="img/car/sell2.png">
 
     <div class="row jf-user-devide"></div>
 
-    <img style="width: 100%;height: auto;" src="img/car/sell3.png">
+    <img class="jf-img-100" src="img/car/sell3.png">
 
     <div class="row jf-user-devide"></div>
 
-    <img style="width: 100%;height: auto;" src="img/car/sell4.png">
+    <img class="jf-img-100" src="img/car/sell4.png">
 
     <div class="row jf-user-devide"></div>
 
-    <div class="jf-bg-light" style="width: 100%;">
+    <div class="jf-bg-light jf-width-100">
 
       <ul class="list">
         <li class="item">
           <div class="row jf-car-detail-spacing"></div>
 
           <div class="row">
-            <div class="col-25"></div>
-            <div class="col-10 jf-center">
-              <hr style="height:1px;border:none;border-top:1px solid #ddd;"/>
+            <div class="col col-25"></div>
+            <div class="col col-10 jf-center">
+              <hr class="jf-line-horizontal"/>
             </div>
-            <div class="col-30 jf-text-center jf-text-assertive" style="font-size: 20px;">人人问答</div>
-            <div class="col-10 jf-center">
-              <hr style="height:1px;border:none;border-top:1px solid #ddd;"/>
+            <div class="col col-30 jf-text-assertive jf-title-text">{{"CAR.SELL.TITLE"|i18n}}</div>
+            <div class="col col-10 jf-center">
+              <hr class="jf-line-horizontal"/>
             </div>
-            <div class="col-25"></div>
+            <div class="col col-25"></div>
           </div>
 
           <div class="row jf-car-detail-spacing"></div>
         </li>
 
         <li class="item item-body row" ng-repeat="question in questions">
-          <div class="col-3"></div>
-          <div class="col-94">
-            <div class="row" style="height: 40px;" ng-click="question.click=!question.click">
-              <div class="col-90">
+          <div class="col col-3"></div>
+          <div class="col col-94">
+            <div class="row jf-sell-advisory" ng-click="question.click=!question.click">
+              <div class="col col-90">
                 {{question.question}}
               </div>
-              <div class="col-10 col-center jf-text-center">
+              <div class="col col-10 col-center jf-text-right">
                 <i class="icon" ng-class="{'ion-chevron-down': !question.click, 'ion-chevron-up': question.click}"></i>
               </div>
             </div>
 
-            <div ng-show="question.click" ng-class="{'animated fadeIn':question.click}">
+            <div ng-show="question.click" ng-class="{'animated fadeIn':question.click,'animated fadeOut':!question.click}">
               <p ng-repeat="answer in question.answer">
                 {{answer}}
               </p>
             </div>
           </div>
-          <div class="col-3"></div>
+          <div class="col col-3"></div>
         </li>
       </ul>
     </div>
 
     <div class="row jf-user-devide"></div>
 
-    <div style="width: 100%;">
+    <div class="jf-width-100">
       <div class="row jf-car-detail-spacing"></div>
       <div class="row">
-        <div class="col-10"></div>
-        <div class="col-80">
-          <button class="button button-small button-assertive" style="width: 100%;height: 35px;">
-            咨询 400-050-6093
+        <div class="col col-10"></div>
+        <div class="col col-80">
+          <button class="button button-small button-assertive jf-sell-advisory">
+            {{"BASE.ADVISORY"|i18n}}&nbsp;{{base.phone}}
           </button>
         </div>
-        <div class="col-10"></div>
+        <div class="col col-10"></div>
       </div>
 
       <div class="row jf-car-detail-spacing"></div>
 
       <div class="row">
-        <div class="col-10"></div>
-        <div class="col-50" style="padding-top: 1px;">
-          <label class="item item-input" style="width: 100%;height: 35px;">
-            <input type="text" ng-model="home.stext" placeholder="请输入电话号码" ng-blur="">
+        <div class="col col-10"></div>
+        <div class="col col-50 jf-sell-phone-padding">
+          <label class="item item-input jf-sell-advisory">
+            <input type="text" ng-model="home.stext" placeholder="{{'BASE.INPUT.PHONE'|i18n}}" ng-blur="">
           </label>
         </div>
-        <div class="col-30">
-          <button class="button button-small button-assertive" style="float:left;width:100%;height: 35px;">
-            预约卖车
+        <div class="col col-30">
+          <button class="button button-small button-assertive jf-float-left jf-sell-advisory">
+            {{"CAR.SELL.PREPARE"|i18n}}
           </button>
         </div>
-        <div class="col-10"></div>
+        <div class="col col-10"></div>
       </div>
 
       <div class="row jf-car-detail-spacing"></div>
 
       <div class="row">
-        <div class="col-10"></div>
-        <div class="col-80" style="height: 1px;border-top: 1px solid #ddd;"></div>
-        <div class="col-10"></div>
+        <div class="col col-10"></div>
+        <div class="col col-80 jf-line-horizontal"></div>
+        <div class="col col-10"></div>
       </div>
 
       <div class="row jf-car-detail-spacing"></div>
 
       <div class="row">
-        <div class="col jf-text-center" style="padding-top: 0;">
-          <span>心里有底&nbsp;才卖不亏&nbsp;</span>
-          <span class="jf-text-assertive">估个价先></span>
+        <div class="col jf-text-center">
+          <span>{{"CAR.SELL.DESC1"|i18n}}&nbsp;{{"CAR.SELL.DESC2"|i18n}}&nbsp;</span>
+          <span class="jf-text-assertive">{{"CAR.SELL.RATE"|i18n}}</span>
         </div>
       </div>
     </div>

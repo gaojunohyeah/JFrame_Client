@@ -66,3 +66,7 @@
   @extend .jf-bg-light-grey;
   height: 20px;
 }
+
+.jf-top-title {
+  top : $bar-height;
+}

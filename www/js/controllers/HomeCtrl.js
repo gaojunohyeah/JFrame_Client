@@ -20,15 +20,15 @@ define(
 
         $scope.slides = [
           {
-            'img': 'http://img1.imgtn.bdimg.com/it/u=2583925440,603289105&fm=21&gp=0.jpg',
+            'img': 'img/car/slide/slide1.png',
             'url': 'haha1'
           },
           {
-            'img': 'http://img4.imgtn.bdimg.com/it/u=1128633536,823776518&fm=21&gp=0.jpg',
+            'img': 'img/car/slide/slide2.png',
             'url': 'haha2'
           },
           {
-            'img': 'http://p9.qhimg.com/t01d054bd548c9e9101.jpg',
+            'img': 'img/car/slide/slide3.png',
             'url': 'haha3'
           }
         ];
@@ -39,8 +39,8 @@ define(
          */
         $scope.homeSlideClick = function (url) {
           var index = $ionicSlideBoxDelegate.currentIndex();
-          alert("你点中了第 " + (index + 1) + " 个幻灯片~~~");
-          alert("url is : " + url);
+          //alert("你点中了第 " + (index + 1) + " 个幻灯片~~~");
+          //alert("url is : " + url);
           //alert($ionicSlideBoxDelegate.slidesCount());
         };
 
@@ -60,7 +60,7 @@ define(
             return;
           }
 
-          alert(stext);
+          //alert(stext);
         };
 
         /**

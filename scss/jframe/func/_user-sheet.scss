@@ -21,6 +21,10 @@
     border-radius: 50%;
   }
 
+  .jf-user-login-bdiv {
+    padding-top: 30px;
+  }
+
   .jf-user-login-button {
     width: 70px;
     height: 30px;
@@ -30,4 +34,26 @@
 .jf-user-devide {
   @extend .jf-bg-light-grey;
   height: 10px;
+}
+
+.jf-user-line-height {
+  height: 25px;
+}
+
+.jf-user-tickit {
+  height: 30px;
+  padding-top: 5px;
+}
+
+.jf-user-recommend {
+  height: 35px;
+  padding-top: 5px;
+}
+
+.jf-user-border-top {
+  border-top: 1px solid #CCCCCC;
+}
+
+.jf-user-border-bottom {
+  border-bottom: 1px solid #CCCCCC;
 }

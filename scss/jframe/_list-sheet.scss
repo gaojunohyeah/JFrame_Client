@@ -14,11 +14,16 @@
   }
 
   .jf-item-left {
-    float:left;
+    float: left;
   }
 
   .jf-item-subdiv {
     @extend .jf-item-left;
-    width:100%;
+    width: 100%;
   }
+}
+
+.jf-item-img {
+  width: 95px;
+  height: 60px;
 }

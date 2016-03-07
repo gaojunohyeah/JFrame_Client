@@ -6,11 +6,16 @@
 
 .jf-home-slide-div {
   width: 100%;
-  height: 220px;
-  background: #777777;
+  //height: 140px;
+  background: $jf-light-grey;
+}
+
+.jf-detail-slide {
+  width: 100%;
+  height: 200px;
 }
 
 .jf-home-slide {
   width: 100%;
-  height: $jf-slide-home;
+  height: auto;
 }

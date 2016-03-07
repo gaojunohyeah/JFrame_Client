@@ -9099,51 +9099,6 @@ a.button {
  * Created by gaojun on 15/12/2.
  * --------------------------------------------------
  */
-.jf-text-left {
-  text-align: left; }
-
-.jf-text-center, .jf-tabs-bottom-text {
-  text-align: center; }
-
-.jf-text-right {
-  text-align: right; }
-
-.jf-text-line-through {
-  text-decoration: line-through; }
-
-.jf-text-light {
-  color: #fff; }
-
-.jf-text-stable {
-  color: #f8f8f8; }
-
-.jf-text-positive {
-  color: #387ef5; }
-
-.jf-text-calm {
-  color: #11c1f3; }
-
-.jf-text-balanced {
-  color: #33cd5f; }
-
-.jf-text-energized {
-  color: #ffc900; }
-
-.jf-text-assertive {
-  color: #ef473a; }
-
-.jf-text-royal {
-  color: #886aea; }
-
-.jf-text-dark {
-  color: #444; }
-
-.jf-text-red {
-  color: red; }
-
-.jf-text-grey {
-  color: grey; }
-
 .jf-bg-light {
   background: #fff; }
 
@@ -9207,8 +9162,11 @@ a.button {
 .jf-width-90 {
   width: 90%; }
 
-.jf-width-100 {
+.jf-width-100, .jf-line-horizontal, .jf-sell-advisory {
   width: 100%; }
+
+.jf-height-100, .jf-line-vertical {
+  height: 100%; }
 
 .jf-float-left, .jf-tabs-bottom-text {
   float: left; }
@@ -9225,8 +9183,84 @@ a.button {
 .jf-display-inline {
   display: inline; }
 
+.jf-padding-top-5 {
+  padding-top: 5px; }
+
 .jf-padding-top-6 {
   padding-top: 6px; }
+
+.jf-img-100 {
+  width: 100%;
+  height: auto; }
+
+.jf-line-horizontal {
+  height: 1px;
+  border: none;
+  border-top: 1px solid #ddd; }
+
+.jf-line-vertical {
+  width: 1px;
+  border: none;
+  border-left: 1px solid #ddd; }
+
+/**
+ * {} Sheets
+ * Created by gaojun on 16/1/28.
+ * --------------------------------------------------
+ */
+.jf-text-left {
+  text-align: left; }
+
+.jf-text-center, .jf-title-text, .jf-small-text, .jf-tabs-bottom-text {
+  text-align: center; }
+
+.jf-text-right {
+  text-align: right; }
+
+.jf-text-line-through {
+  text-decoration: line-through; }
+
+.jf-text-light {
+  color: #fff; }
+
+.jf-text-stable {
+  color: #f8f8f8; }
+
+.jf-text-positive {
+  color: #387ef5; }
+
+.jf-text-calm {
+  color: #11c1f3; }
+
+.jf-text-balanced {
+  color: #33cd5f; }
+
+.jf-text-energized {
+  color: #ffc900; }
+
+.jf-text-assertive {
+  color: #ef473a; }
+
+.jf-text-royal {
+  color: #886aea; }
+
+.jf-text-dark {
+  color: #444; }
+
+.jf-text-red {
+  color: red; }
+
+.jf-text-grey {
+  color: grey; }
+
+.jf-text-light-grey {
+  color: #CCCCCC; }
+
+.jf-title-text {
+  font-size: 20px; }
+
+.jf-small-text {
+  font-size: 13px; }
 
 /**
  * {grid} Sheets
@@ -9373,6 +9407,10 @@ a.button {
   .jf-item-small .jf-item-subdiv {
     width: 100%; }
 
+.jf-item-img {
+  width: 95px;
+  height: 60px; }
+
 /**
  * {button} Sheets
  * Created by gaojun on 15/12/4.
@@ -9433,6 +9471,9 @@ a.button {
 .jf-car-detail-devide {
   height: 20px; }
 
+.jf-top-title {
+  top: 44px; }
+
 /**
  * {slide} Sheets
  * Created by gaojun on 15/12/2.
@@ -9440,12 +9481,15 @@ a.button {
  */
 .jf-home-slide-div {
   width: 100%;
-  height: 220px;
-  background: #777777; }
+  background: #CCCCCC; }
+
+.jf-detail-slide {
+  width: 100%;
+  height: 200px; }
 
 .jf-home-slide {
   width: 100%;
-  height: 200px; }
+  height: auto; }
 
 /**
  * {tabs} Sheets
@@ -9502,9 +9546,39 @@ a.button {
     background-size: cover !important;
     background-color: #ededed;
     border-radius: 50%; }
+  .jf-user-login .jf-user-login-bdiv {
+    padding-top: 30px; }
   .jf-user-login .jf-user-login-button {
     width: 70px;
     height: 30px; }
 
 .jf-user-devide {
   height: 10px; }
+
+.jf-user-line-height {
+  height: 25px; }
+
+.jf-user-tickit {
+  height: 30px;
+  padding-top: 5px; }
+
+.jf-user-recommend {
+  height: 35px;
+  padding-top: 5px; }
+
+.jf-user-border-top {
+  border-top: 1px solid #CCCCCC; }
+
+.jf-user-border-bottom {
+  border-bottom: 1px solid #CCCCCC; }
+
+/**
+ * {} Sheets
+ * Created by gaojun on 16/1/28.
+ * --------------------------------------------------
+ */
+.jf-sell-advisory {
+  line-height: 20px; }
+
+.jf-sell-phone-padding {
+  padding-top: 1px; }

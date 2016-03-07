@@ -1,1 +1,6 @@
-cordova plugin add cordova-plugin-whitelist
+# 白名单插件
+cordova plugin add cordova-plugin-whitelist --save
+# 启动画面插件
+cordova plugin add cordova-plugin-splashscreen --save
+# 社交分享插件
+cordova plugin add cordova-plugin-x-socialsharing --save

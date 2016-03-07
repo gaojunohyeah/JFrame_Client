@@ -25,6 +25,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "scss/jframe/variables";
 
 @import "scss/jframe/base-sheet";
+@import "scss/jframe/text-sheet";
 @import "scss/jframe/grid-sheet";
 @import "scss/jframe/animation-sheet";
 @import "scss/jframe/list-sheet";
@@ -34,4 +35,5 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 @import "scss/jframe/tabs-sheet";
 
 @import "scss/jframe/func/user-sheet";
+@import "scss/jframe/func/sell-sheet";
 

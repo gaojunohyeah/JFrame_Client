@@ -18,6 +18,8 @@ define(
       'BASE.COMFIRM': '确定',
       'BASE.APPLY': '申请',
       'BASE.CLICK.LOGIN': '点击登录',
+      'BASE.ADVISORY': '咨询',
+      'BASE.INPUT.PHONE': '请输入电话号码',
 
       'BASE.HOME_TAG': '首页',
       'BASE.CAR_TAG': '我要买车',
@@ -64,6 +66,21 @@ define(
       'USER.LOGIN': '登录',
       'USER.LOGOUT': '登出',
       'USER.REGISTER': '没有账号?注册!',
+      'USER.FEEDBACK': '用户反馈',
+
+      'USER.CAR.COLLECTION': '收藏车辆',
+      'USER.CAR.SUBSCRIBE': '订阅车源',
+      'USER.CAR.HISTORY': '浏览记录',
+
+      'USER.TICKIT': '我的优惠券',
+      'USER.TICKIT.UNUSE': '%d张可用',
+      'USER.RECOMMEND': '为您推荐',
+
+      'CAR.TITLE.SELL': '我要卖车',
+      'CAR.SELL.PREPARE': '预约卖车',
+      'CAR.SELL.DESC1': '心里有底',
+      'CAR.SELL.DESC2': '才卖不亏',
+      'CAR.SELL.RATE': '估个价先>',
 
       'CAR.DESC1': '1年2万公里质保',
       'CAR.DESC2': '免过户费，包办手续',
@@ -120,19 +137,20 @@ define(
       'AREA_NAME_5': '华南',
       'AREA_NAME_6': '西部',
 
-      'CAR.SELL.QUES1':'Q1 人人车是谁？怎么帮我卖车？',
-      'CAR.SELL.QUES2':'Q2 多长时间能够成交，有什么费用么？',
-      'CAR.SELL.QUES3':'Q3 20天保底价格出售是什么意思？',
+      'CAR.SELL.TITLE': '人人问答',
+      'CAR.SELL.QUES1': 'Q1 人人车是谁？怎么帮我卖车？',
+      'CAR.SELL.QUES2': 'Q2 多长时间能够成交，有什么费用么？',
+      'CAR.SELL.QUES3': 'Q3 20天保底价格出售是什么意思？',
 
-      'CAR.SELL.QUES1.ANSWER1':'人人车是中国最大的专业个人二手车交易服务平台，每天有百万个人买家在这里选车，我们只将您的爱车卖给真实个人买家，在把您的爱车卖出最优价格的同时，完全杜绝了经销商、4S店对您的骚扰。',
-      'CAR.SELL.QUES1.ANSWER2':'1、在此页面填写车辆信息，或拨打400-691-0670联系我们。',
-      'CAR.SELL.QUES1.ANSWER3':'2、约定后和卖车顾问和评估师在约定时间地点进行见面，对车辆拍摄高质量照片并对车辆细致评估，定出一个合理价格。',
-      'CAR.SELL.QUES1.ANSWER4':'3、人人车将采集完的信息发布到包括人人车以内的百家交易平台，为您寻找个人买家。',
-      'CAR.SELL.QUES1.ANSWER5':'4、带有购买意向的买家约见看车。',
+      'CAR.SELL.QUES1.ANSWER1': '人人车是中国最大的专业个人二手车交易服务平台，每天有百万个人买家在这里选车，我们只将您的爱车卖给真实个人买家，在把您的爱车卖出最优价格的同时，完全杜绝了经销商、4S店对您的骚扰。',
+      'CAR.SELL.QUES1.ANSWER2': '1、在此页面填写车辆信息，或拨打%s联系我们。',
+      'CAR.SELL.QUES1.ANSWER3': '2、约定后和卖车顾问和评估师在约定时间地点进行见面，对车辆拍摄高质量照片并对车辆细致评估，定出一个合理价格。',
+      'CAR.SELL.QUES1.ANSWER4': '3、人人车将采集完的信息发布到包括人人车以内的百家交易平台，为您寻找个人买家。',
+      'CAR.SELL.QUES1.ANSWER5': '4、带有购买意向的买家约见看车。',
 
-      'CAR.SELL.QUES2.ANSWER1':'根据我们的经验，大部分车辆在一到两周之内可以成交',
-      'CAR.SELL.QUES2.ANSWER2':'我们不会向卖家收取任何费用，整个服务过程全部免费，在成交之后会向买家收取不超过3%%的增值服务费，包括车况检测、质保等一系列增值服务费。',
+      'CAR.SELL.QUES2.ANSWER1': '根据我们的经验，大部分车辆在一到两周之内可以成交',
+      'CAR.SELL.QUES2.ANSWER2': '我们不会向卖家收取任何费用，整个服务过程全部免费，在成交之后会向买家收取不超过3%%的增值服务费，包括车况检测、质保等一系列增值服务费。',
 
-      'CAR.SELL.QUES3.ANSWER1':'承诺20天内帮您把车卖出，否则人人车按照事前商定的保底价格（参考市场行情）收购，最大限度保障您的利益。',
+      'CAR.SELL.QUES3.ANSWER1': '承诺20天内帮您把车卖出，否则人人车按照事前商定的保底价格（参考市场行情）收购，最大限度保障您的利益。',
     };
   });

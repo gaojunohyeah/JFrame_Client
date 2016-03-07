@@ -12,6 +12,14 @@ define([],
         $scope.logout = function () {
           authSrv.logout();
         };
+
+        /**
+         * 显示车详情页面
+         * @param id 车辆id
+         */
+        $scope.showCarDetail = function (id) {
+          $state.go('carDetail', {id: id});
+        };
       }
     ];
   });

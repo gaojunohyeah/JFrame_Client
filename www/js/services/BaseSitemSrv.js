@@ -3,8 +3,10 @@
  */
 
 define(
-  [],
-  function () {
+  [
+    'config',
+  ],
+  function (config) {
     'use strict';
 
     return ['$filter', 'reqSrv', 'enums',
@@ -335,7 +337,7 @@ define(
             question: $filter('i18n')("CAR.SELL.QUES1"),
             answer: [
               $filter('i18n')("CAR.SELL.QUES1.ANSWER1"),
-              $filter('i18n')("CAR.SELL.QUES1.ANSWER2"),
+              $filter('i18n')("CAR.SELL.QUES1.ANSWER2", config.phone),
               $filter('i18n')("CAR.SELL.QUES1.ANSWER3"),
               $filter('i18n')("CAR.SELL.QUES1.ANSWER4"),
               $filter('i18n')("CAR.SELL.QUES1.ANSWER5"),

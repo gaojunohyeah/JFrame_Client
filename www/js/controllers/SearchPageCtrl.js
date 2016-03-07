@@ -84,7 +84,7 @@ define(
             };
 
             // 城市已经被选中
-            if (_.indexOf(choosedCityIds, id) > -1) {
+            if (_.indexOf(choosedCityIds, parseInt(id)) > -1) {
               cityData.choose = true;
               $scope.chooseCity(id);
             }

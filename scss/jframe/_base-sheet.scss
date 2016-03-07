@@ -4,66 +4,6 @@
  * --------------------------------------------------
  */
 
-.jf-text-left {
-  text-align: left;
-}
-
-.jf-text-center {
-  text-align: center;
-}
-
-.jf-text-right {
-  text-align: right;
-}
-
-.jf-text-line-through {
-  text-decoration: line-through;
-}
-
-.jf-text-light {
-  color: $light;
-}
-
-.jf-text-stable {
-  color: $stable;
-}
-
-.jf-text-positive {
-  color: $positive;
-}
-
-.jf-text-calm {
-  color: $calm;
-}
-
-.jf-text-balanced {
-  color: $balanced;
-}
-
-.jf-text-energized {
-  color: $energized;
-}
-
-.jf-text-assertive {
-  color: $assertive;
-}
-
-.jf-text-royal {
-  color: $royal;
-}
-
-.jf-text-dark {
-  color: $dark;
-}
-
-.jf-text-red {
-  color: red;
-}
-
-.jf-text-grey {
-  color: grey;
-}
-
 .jf-bg-light {
   background: $light;
 }
@@ -152,6 +92,10 @@
   width: 100%;
 }
 
+.jf-height-100 {
+  height: 100%;
+}
+
 .jf-float-left {
   float: left;
 }
@@ -172,8 +116,31 @@
   display: inline;
 }
 
+.jf-padding-top-5 {
+  padding-top: 5px;
+}
+
 .jf-padding-top-6 {
   padding-top: 6px;
+}
+
+.jf-img-100 {
+  width: 100%;
+  height: auto;
+}
+
+.jf-line-horizontal {
+  @extend .jf-width-100;
+  height: 1px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.jf-line-vertical {
+  @extend .jf-height-100;
+  width: 1px;
+  border: none;
+  border-left: 1px solid #ddd;
 }
 
 

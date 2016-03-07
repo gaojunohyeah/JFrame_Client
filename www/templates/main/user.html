@@ -1,14 +1,12 @@
 <ion-view class="jf-animate-in-secondary">
   <ion-content has-bouncing="false">
     <div class="jf-banner">
-      <img class="jf-banner jf-banner-bg" src="img/yiliya2.jpg">
+      <img class="jf-banner jf-banner-bg" src="img/car/bg/blurred-bg.png">
 
       <div class="row jf-user-login">
-        <div class="jf-user-login-img" style="background-image:url(http://localhost:8100/img/yiliya.png);">
-
+        <div class="jf-user-login-img" style="background-image:url(img/user/default-avator.png);">
         </div>
-        <div class="col col-bottom">
-          <!--border-radius:50%-->
+        <div class="col col-bottom jf-user-login-bdiv">
           <button ng-click="" class="button button-small button-outline button-light jf-user-login-button">
             {{'BASE.CLICK.LOGIN'|i18n}}
           </button>
@@ -22,56 +20,57 @@
 
     <div class="jf-bg-stable">
       <div class="row">
-        <div class="col-3"></div>
-        <div class="col-30 jf-text-center">
-          <span style="font-size: 13px;">0</span><br/>
-          <span style="font-size: 13px;color: #CCCCCC;">收藏车辆</span>
+        <div class="col col-3"></div>
+        <div class="col col-30 jf-small-text">
+          <span>0</span><br/>
+          <span class="jf-text-light-grey">{{"USER.CAR.COLLECTION"|i18n}}</span>
         </div>
-        <div class="col-2">
-          <hr style="height:25px;width:1px;color: #ddd;"/>
+        <div class="col col-2 jf-user-line-height">
+          <hr class="jf-line-vertical"/>
         </div>
-        <div class="col-30 jf-text-center">
-          <span style="font-size: 13px;">0</span><br/>
-          <span style="font-size: 13px;color: #CCCCCC;">订阅车源</span>
+        <div class="col col-30 jf-small-text">
+          <span>0</span><br/>
+          <span class="jf-text-light-grey">{{"USER.CAR.SUBSCRIBE"|i18n}}</span>
         </div>
-        <div class="col-2">
-          <hr style="height:25px;width:1px;color: #ddd;"/>
+        <div class="col col-2 jf-user-line-height">
+          <hr class="jf-line-vertical"/>
         </div>
-        <div class="col-30 jf-text-center">
-          <span style="font-size: 13px;">123</span><br/>
-          <span style="font-size: 13px;color: #CCCCCC;">浏览记录</span>
+        <div class="col col-30 jf-small-text">
+          <span>123</span><br/>
+          <span class="jf-text-light-grey">{{"USER.CAR.HISTORY"|i18n}}</span>
         </div>
-        <div class="col-3"></div>
+        <div class="col col-3"></div>
       </div>
 
-      <div class="row jf-bg-light" style="border-top:1px solid #CCCCCC;">
-        <div class="col-3"></div>
-        <div class="col-94" style="height:30px;padding-top: 5px;">
+      <div class="row jf-bg-light jf-user-border-top">
+        <div class="col col-3"></div>
+        <div class="col col-94 jf-user-tickit">
           <div class="jf-float-left">
-            <span class="jf-text-assertive"><i class="icon ion-android-list"></i></span>我的优惠券
+            <span class="jf-text-assertive"><i class="icon ion-android-list"></i></span>
+            {{"USER.TICKIT"|i18n}}
           </div>
           <div class="jf-float-right">
-            0张可用<i class="icon ion-ios-arrow-right"></i>
+            {{"USER.TICKIT.UNUSE"|i18n:0}}<i class="icon ion-ios-arrow-right"></i>
           </div>
         </div>
-        <div class="col-3"></div>
+        <div class="col col-3"></div>
       </div>
 
       <div class="row jf-user-devide"></div>
 
       <div>
         <ul class="list">
-          <li class="row jf-bg-light" style="height:35px;padding-top: 5px;">
-            <div class="col-3"></div>
-            <div class="col-94">为您推荐</div>
-            <div class="col-3"></div>
+          <li class="row jf-bg-light jf-user-recommend">
+            <div class="col col-3"></div>
+            <div class="col col-94">{{"USER.RECOMMEND"|i18n}}</div>
+            <div class="col col-3"></div>
           </li>
 
-          <li class="item jf-item-small">
-            <img src="/img/yiliya2.jpg" width="20%" height="auto">
+          <li class="item jf-item-small" ng-click="showCarDetail(1);">
+            <img src="http://120.25.195.147:3333/files/car/4OBoPEFutFEiX8q5ehZOqZS7.png" class="jf-item-img">
 
             <div class="jf-item-small-content">
-              <div  class="jf-item-subdiv">
+              <div class="jf-item-subdiv">
                 <h3>奥迪A8&nbsp;&nbsp;2013款 A8L 50 TFSI quattro尊贵型</h3>
               </div>
 
@@ -87,19 +86,22 @@
 
               <div class="jf-item-subdiv">
                 <div class="jf-item-left">
-                  <button class="button jf-img-small button-outline button-positive">超值</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-energized">车主急售</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-balanced">准新车</button>&nbsp;
+                  <button class="button jf-img-small button-outline button-positive">超值</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-energized">车主急售</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-balanced">准新车</button>
+                  &nbsp;
                 </div>
               </div>
             </div>
           </li>
 
-          <li class="item jf-item-small">
-            <img src="/img/yiliya2.jpg" width="20%" height="auto">
+          <li class="item jf-item-small" ng-click="showCarDetail(1);">
+            <img src="http://120.25.195.147:3333/files/car/jlwxXGESlkzqx0ub6WpC6qK5.png" class="jf-item-img">
 
             <div class="jf-item-small-content">
-              <div  class="jf-item-subdiv">
+              <div class="jf-item-subdiv">
                 <h3>奥迪A8&nbsp;&nbsp;2013款 A8L 50 TFSI quattro尊贵型</h3>
               </div>
 
@@ -115,19 +117,22 @@
 
               <div class="jf-item-subdiv">
                 <div class="jf-item-left">
-                  <button class="button jf-img-small button-outline button-positive">超值</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-energized">车主急售</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-balanced">准新车</button>&nbsp;
+                  <button class="button jf-img-small button-outline button-positive">超值</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-energized">车主急售</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-balanced">准新车</button>
+                  &nbsp;
                 </div>
               </div>
             </div>
           </li>
 
-          <li class="item jf-item-small">
-            <img src="/img/yiliya2.jpg" width="20%" height="auto">
+          <li class="item jf-item-small" ng-click="showCarDetail(1);">
+            <img src="http://120.25.195.147:3333/files/car/SidXROLRxjN1rOFV8NSC-UCJ.png" class="jf-item-img">
 
             <div class="jf-item-small-content">
-              <div  class="jf-item-subdiv">
+              <div class="jf-item-subdiv">
                 <h3>奥迪A8&nbsp;&nbsp;2013款 A8L 50 TFSI quattro尊贵型</h3>
               </div>
 
@@ -143,19 +148,22 @@
 
               <div class="jf-item-subdiv">
                 <div class="jf-item-left">
-                  <button class="button jf-img-small button-outline button-positive">超值</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-energized">车主急售</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-balanced">准新车</button>&nbsp;
+                  <button class="button jf-img-small button-outline button-positive">超值</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-energized">车主急售</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-balanced">准新车</button>
+                  &nbsp;
                 </div>
               </div>
             </div>
           </li>
 
-          <li class="item jf-item-small">
-            <img src="/img/yiliya2.jpg" width="20%" height="auto">
+          <li class="item jf-item-small" ng-click="showCarDetail(1);">
+            <img src="http://120.25.195.147:3333/files/car/nr_gqvTxAl4ZEMQ7pMLK45zT.png" class="jf-item-img">
 
             <div class="jf-item-small-content">
-              <div  class="jf-item-subdiv">
+              <div class="jf-item-subdiv">
                 <h3>奥迪A8&nbsp;&nbsp;2013款 A8L 50 TFSI quattro尊贵型</h3>
               </div>
 
@@ -171,9 +179,12 @@
 
               <div class="jf-item-subdiv">
                 <div class="jf-item-left">
-                  <button class="button jf-img-small button-outline button-positive">超值</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-energized">车主急售</button>&nbsp;
-                  <button class="button jf-img-small button-outline button-balanced">准新车</button>&nbsp;
+                  <button class="button jf-img-small button-outline button-positive">超值</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-energized">车主急售</button>
+                  &nbsp;
+                  <button class="button jf-img-small button-outline button-balanced">准新车</button>
+                  &nbsp;
                 </div>
               </div>
             </div>
@@ -183,9 +194,9 @@
 
       <div class="row jf-user-devide"></div>
 
-      <div class="row jf-bg-light" style="border-top:1px solid #CCCCCC;">
-        <div class="col jf-text-center" style="height:30px;padding-top: 5px;">
-          <i class="icon ion-ios-compose-outline"></i>用户反馈
+      <div class="row jf-bg-light jf-user-border-top">
+        <div class="col jf-text-center jf-user-tickit">
+          <i class="icon ion-ios-compose-outline"></i>{{"USER.FEEDBACK"|i18n}}
         </div>
       </div>
     </div>

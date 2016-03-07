@@ -23,10 +23,10 @@ define([
      * 系统启动后会根据app端或是web端进行local_url设置
      */
     l_web_url: "http://" + window.location.hostname + ":8100/server/",
-    l_dev_url: "http://192.168.111.116:3000/",
+    l_dev_url: "http://120.25.195.147:3000/",
     local_url: "",
 
-    resource_url: "http://192.168.111.116:3333",
+    resource_url: "http://120.25.195.147:3333",
 
     // default language
     default_language: "zh_CN",
@@ -46,13 +46,18 @@ define([
      * default per search result page size
      * default value : 2
      */
-    default_page_size: 2,
+    default_page_size: 20,
 
     /*
      * default price unit
      * default value : 10000
      */
     default_price_unit: 10000,
+
+    /**
+     * default phone
+     */
+    phone: '400-050-6093',
   };
 
   // This initializes a new hash on purpose, to avoid adding parameters to
